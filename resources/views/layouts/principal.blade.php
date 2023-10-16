@@ -113,7 +113,7 @@
         <!-- switcher menu -->
         <div class="switcher">
             <div class="switch_btn">
-                <button><img src="assets/images/icon/color-palette.png" alt="Color Palette"> </button>
+                <button><img src="/assets/images/icon/color-palette.png" alt="Color Palette"> </button>
             </div>
             <div class="switch_menu">
                 <!-- color changer -->
@@ -156,7 +156,7 @@
                         <div class="header-left">
                             <div class="main-logo-box">
                                 <a href="index.html">
-                                    <img src="assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
+                                    <img src="/assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                 </a>
                             </div>
 
