@@ -40,9 +40,13 @@
                             <ul class="service-pages">
                                 @foreach ($listaServicios as $item)
                                     <li class="{{ $item['bEstado'] ? 'active' : '' }}">
-                                        <a href="#" onclick="return false" wire:click="increment">
+                                        {{-- <a href="#" onclick="return false;" wire:click="cambioServicioId($item['id'])">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
-                                        </a>
+                                        </a> --}}
+                                        {{-- <button  wire:click="cambioServicioId({{$item['id']}})">  <a href="#" onclick="return false;">
+                                            {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
+                                        </a></button> --}}
+                                        <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['descripcion'] }} <span class="icon-right-arrow"></span></button>
 
                                     </li>
                                 @endforeach
@@ -82,7 +86,7 @@
                     <div class="service-details__content">
                         <div class="img-box-outer">
                             <div class="img-box1">
-                                <img src="/assets/images/services/service-details-1-img1.jpg" alt="" />
+                                <img src="{{$servicio['ruta_foto_principal']}}" alt="" />
                             </div>
                             <div class="icon">
                                 <span class="icon-creative"></span>
@@ -92,7 +96,7 @@
                         <div class="text-box1">
                             <h2>{{ $servicio['descripcion'] }}</h2>
                             <p>
-                                {{ $servicio['detalle_descripcion'] }}
+                                {{ $servicio['detalle_descripcion_amplia'] }}
                             </p>
 
                         </div>
@@ -127,33 +131,25 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="img-box">
-                                        <img style=" width: 370px; height: 320px" src="<?php echo $servicio['ruta_foto']; ?>"
+                                        <img style=" width: 370px; height: 320px" src="{{$servicio['ruta_foto_detalle']}}"
                                             alt="" />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="content-box">
                                         <h2>Beneficios del Servicio</h2>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                                        <p>Los beneficios que brinda el servicio {{$servicio['descripcion']}} son:
                                         </p>
 
                                         <ul>
-                                            <li>
-                                                <span class="icon-check"></span> In id diam nec nisi
-                                                congue tincidunt
-                                            </li>
-                                            <li>
-                                                <span class="icon-check"></span> Pn malesuada purus a ligula
-                                                dapibus
-                                            </li>
-                                            <li>
-                                                <span class="icon-check"></span> Vestibulum tincidunt arcu vel
-                                                nisl
-                                            </li>
-                                            <li>
-                                                <span class="icon-check"></span> Sed tristique lorem non
-                                                tesque
-                                            </li>
+                                            @foreach ($servicio['beneficios'] as $beneficio)
+                                                <li>
+                                                    <span class="icon-check"></span> 
+                                                    {{$beneficio['descripcion']}}
+                                                </li>
+                                            @endforeach
+                                            
+                                           
                                         </ul>
                                     </div>
                                 </div>

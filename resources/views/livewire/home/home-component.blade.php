@@ -192,7 +192,7 @@
                         <div class="single-service-style2">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img src="<?php echo $servicio['ruta_foto']; ?>" alt="">
+                                    <img src="{{$servicio['ruta_foto_principal']}}" alt="">
                                 </div>
                                 <div class="icon">
                                     <span class="icon-creative"></span>
@@ -202,7 +202,7 @@
                                 <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}">{{$servicio['descripcion']}}</a></h3>
                                 <div class="text">
                                     <p>
-                                        {{$servicio['detalle_descripcion']}}
+                                        {{$servicio['detalle_descripcion_resumida']}}
                                     </p>
                                 </div>
                                 <div class="btn-box">
@@ -300,7 +300,7 @@
                     <div class="col-xl-4 col-lg-12">
                         <div class="single-blog-style1">
                             <div class="img-holder">
-                                <img src="<?php echo $proyecto['ruta_foto']; ?>" alt="">
+                                <img src="{{$proyecto['ruta_foto']}}" alt="">
                                 <div class="date-box">
                                     <p>{{ $proyecto['fecha_implementacion'] }}</p>
                                 </div>
@@ -309,7 +309,7 @@
                                 <div class="meta-info">
                                     <ul>
                                         <li><span class="icon-check"></span>
-                                            <a href="#" data-toggle="modal"
+                                            <a href="#" onclick="return false;" data-toggle="modal"
                                                 data-target="#modal{{ $proyecto['id'] }}">
                                                 {{ $proyecto['empresa_cliente'] }}
                                             </a>
@@ -317,12 +317,12 @@
                                     </ul>
                                 </div>
                                 <h3>
-                                    <a href="#" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
                                         {{ $proyecto['descripcion'] }}
                                     </a>
                                 </h3>
                                 <div class="btn-box">
-                                    <a href="blog-single.html">{{ $proyecto['servicio'] }}</a>
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
                                 </div>
                             </div>
                         </div>
@@ -389,6 +389,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                       {{--  @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                        {{$detalle['ruta_foto']}}
+                        @endforeach --}}
                         <div id="carouselExample{{ $proyecto['id'] }}" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
@@ -401,12 +404,14 @@
                             <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}"
                                 role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                {{--  <span class="sr-only">Previous</span> --}}
+                                 <span class="sr-only" style="color:black">Previous</span>
+                                {{--  <p style="color:black"><</p> --}}
                             </a>
                             <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}"
                                 role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                {{--  <span class="sr-only">Next</span> --}}
+                                 <span class="sr-only">Next</span>
+                                 >
 
                             </a>
                         </div>
