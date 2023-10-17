@@ -187,26 +187,26 @@
             </div>
             <div class="row text-right-rtl">
                 <!--Start Single Service Style2-->
-                @foreach ($servicios as $servicio)
+                  @foreach ($servicios as $servicio)
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="single-service-style2">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img src="assets/images/services/service-v1-1.jpg" alt="">
+                                    <img src="{{$servicio['ruta_foto_principal']}}" alt="">
                                 </div>
                                 <div class="icon">
                                     <span class="icon-creative"></span>
                                 </div>
                             </div>
                             <div class="title-holder">
-                                <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio->id]) }}">{{$servicio->descripcion}}</a></h3>
+                                <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}">{{$servicio['descripcion']}}</a></h3>
                                 <div class="text">
                                     <p>
-                                        {{$servicio->detalle_descripcion}}
+                                        {{$servicio['detalle_descripcion_resumida']}}
                                     </p>
                                 </div>
                                 <div class="btn-box">
-                                    <a href="{{ route('portafolio', ['servicio_id' => $servicio->id]) }}"><span class="icon-right-arrow"></span></a>
+                                    <a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}"><span class="icon-right-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -293,87 +293,50 @@
                 <h2>Últimos proyectos</h2>
             </div>
             <div class="row">
-                <!--Start Single Blog Style1-->
-                <div class="col-xl-4 col-lg-12">
-                    <div class="single-blog-style1">
-                        <div class="img-holder">
-                            <img src="assets/images/blog/blog-v1-1.jpg" alt="">
-                            <div class="date-box">
-                                <p>20 oct</p>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <div class="meta-info">
-                                <ul>
-                                    <li><span class="icon-user"></span><a href="#">by Admin</a></li>
-                                    <li><span class="icon-conversation"></span><a href="#">2 Comments</a></li>
-                                </ul>
-                            </div>
-                            <h3><a href="blog-single.html">Accounting Support During the Exponential Growth</a></h3>
-                            <div class="btn-box">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Single Blog Style1-->
 
-                <!--Start Single Blog Style1-->
-                <div class="col-xl-4 col-lg-12">
-                    <div class="single-blog-style1">
-                        <div class="img-holder">
-                            <img src="assets/images/blog/blog-v1-2.jpg" alt="">
-                            <div class="date-box">
-                                <p>20 oct</p>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <div class="meta-info">
-                                <ul>
-                                    <li><span class="icon-user"></span><a href="#">by Admin</a></li>
-                                    <li><span class="icon-conversation"></span><a href="#">2 Comments</a></li>
-                                </ul>
-                            </div>
-                            <h3><a href="blog-single.html">How to Manage Your Business’s Online Reputation</a></h3>
-                            <div class="btn-box">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Single Blog Style1-->
 
-                <!--Start Single Blog Style1-->
-                <div class="col-xl-4 col-lg-12">
-                    <div class="single-blog-style1">
-                        <div class="img-holder">
-                            <img src="assets/images/blog/blog-v1-3.jpg" alt="">
-                            <div class="date-box">
-                                <p>20 oct</p>
+                @foreach ($ultimosProyectos as $proyecto)
+                    <!--Start Single Blog Style1-->
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="single-blog-style1">
+                            <div class="img-holder">
+                                <img src="{{$proyecto['ruta_foto']}}" alt="">
+                                <div class="date-box">
+                                    <p>{{ $proyecto['fecha_implementacion'] }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-holder">
-                            <div class="meta-info">
-                                <ul>
-                                    <li><span class="icon-user"></span><a href="#">by Admin</a></li>
-                                    <li><span class="icon-conversation"></span><a href="#">2 Comments</a></li>
-                                </ul>
-                            </div>
-                            <h3><a href="blog-single.html">If You Want to be a Great Leader Shut Up and Just
-                                    Listen</a></h3>
-                            <div class="btn-box">
-                                <a href="blog-single.html">Read More</a>
+                            <div class="text-holder">
+                                <div class="meta-info">
+                                    <ul>
+                                        <li><span class="icon-check"></span>
+                                            <a href="#" onclick="return false;" data-toggle="modal"
+                                                data-target="#modal{{ $proyecto['id'] }}">
+                                                {{ $proyecto['empresa_cliente'] }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
+                                        {{ $proyecto['descripcion'] }}
+                                    </a>
+                                </h3>
+                                <div class="btn-box">
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--End Single Blog Style1-->
+                    <!--End Single Blog Style1-->
+                @endforeach
+
 
 
             </div>
         </div>
     </section>
     <!--End Blog Style1 Area-->
+
 
     <!--Start Partner Area-->
     <section class="partner-area bg-white">
@@ -383,22 +346,26 @@
                     <ul class="partner-box partner-carousel owl-carousel owl-theme owl-dot-style1 rtl-carousel">
                         <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
-                            <a href="#"><img src="assets/images/brand/brand-logo-1.png" alt="Awesome Image"></a>
+                            <a href="#"><img src="assets/images/brand/brand-logo-1.png"
+                                    alt="Awesome Image"></a>
                         </li>
                         <!--End Single Partner Logo Box-->
                         <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
-                            <a href="#"><img src="assets/images/brand/brand-logo-2.png" alt="Awesome Image"></a>
+                            <a href="#"><img src="assets/images/brand/brand-logo-2.png"
+                                    alt="Awesome Image"></a>
                         </li>
                         <!--End Single Partner Logo Box-->
                         <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
-                            <a href="#"><img src="assets/images/brand/brand-logo-3.png" alt="Awesome Image"></a>
+                            <a href="#"><img src="assets/images/brand/brand-logo-3.png"
+                                    alt="Awesome Image"></a>
                         </li>
                         <!--End Single Partner Logo Box-->
                         <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
-                            <a href="#"><img src="assets/images/brand/brand-logo-4.png" alt="Awesome Image"></a>
+                            <a href="#"><img src="assets/images/brand/brand-logo-4.png"
+                                    alt="Awesome Image"></a>
                         </li>
                         <!--End Single Partner Logo Box-->
                     </ul>
@@ -407,4 +374,53 @@
         </div>
     </section>
     <!--End Partner Area-->
+
+
+    @foreach ($ultimosProyectos as $proyecto)
+        <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
+                            {{ $proyecto['descripcion'] }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       {{--  @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                        {{$detalle['ruta_foto']}}
+                        @endforeach --}}
+                        <div id="carouselExample{{ $proyecto['id'] }}" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                        <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
+                                            alt="Detalle {{ $index + 1 }}">
+                                    </div>
+                                @endforeach
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}"
+                                role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="sr-only" style="color:black">Previous</span>
+                                {{--  <p style="color:black"><</p> --}}
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}"
+                                role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="sr-only">Next</span>
+                                 >
+
+                            </a>
+                        </div>
+                    </div>
+                    {{--    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    @endforeach
 </div>

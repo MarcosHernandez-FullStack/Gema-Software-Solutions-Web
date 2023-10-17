@@ -1,4 +1,4 @@
-/*** 
+/***
 =============================================
     service Style1 Area Css
 =============================================
@@ -285,7 +285,7 @@
 
 
 
-/*** 
+/***
 =============================================
     service Style2 Area Css
 =============================================
@@ -324,7 +324,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    background-color: var(--thm-bg);
+   /*  background-color: var(--thm-bg); */ /* Escala de grises de los servicios */
     z-index: 1;
 }
 
@@ -506,7 +506,7 @@
 
 
 
-/*** 
+/***
 =============================================
     service Page Css
 =============================================
@@ -522,7 +522,7 @@
 
 
 
-/*** 
+/***
 =============================================
     Service Details Area Css
 =============================================
@@ -940,12 +940,12 @@
 .service-details__content .text-box4 .img-box {
     position: relative;
     display: block;
-    background-color: var(--thm-bg);
+   /*  background-color: var(--thm-bg); */
 }
 
 .service-details__content .text-box4 .img-box img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
 }
 
 
