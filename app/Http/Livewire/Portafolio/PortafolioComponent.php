@@ -41,4 +41,9 @@ class PortafolioComponent extends Component
             return $data;
         }
     }
+
+    public function cambioServicioId($servicio_id_actual){
+        $this->servicio_id=$servicio_id_actual;
+        /* dd($servicio_id_actual); */
+    }
 }
