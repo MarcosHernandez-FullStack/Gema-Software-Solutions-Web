@@ -155,7 +155,7 @@
                         <!--Start Header Left-->
                         <div class="header-left">
                             <div class="main-logo-box">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img src="/assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                 </a>
                             </div>
@@ -179,13 +179,13 @@
                                             <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
                                               
                                             </li>
-                                            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif"><a href="#"><span>SERVICIOS</span></a>
+                                            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif"><a href="{{ route('servicios') }}"><span>SERVICIOS</span></a>
                                         
                                             </li>
-                                            <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif"><a href="#"><span>PORTAFOLIO</span></a>
+                                            <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif"><a href="{{ route('portafolio') }}"><span>PORTAFOLIO</span></a>
                                                 
                                             </li>
-                                            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="contact.html"><span>CONTACTO</span></a></li>
+                                            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -203,14 +203,14 @@
                                     <span class="icon-phone-call"></span>
                                 </div>
                                 <div class="phone">
-                                    <a href="tel:123456789">+51 968 372 292</a>
+                                    <a href="tel:+51968372292">+51 968 372 292</a>
                                 </div>
                             </div>
-                            <div class="serach-button-style1">
+                            <!--div class="serach-button-style1">
                                 <button type="button" class="search-toggler">
                                     <i class="icon-magnifying-glass"></i>
                                 </button>
-                            </div>
+                            </div-->
                         </div>
                         <!--End Header Right-->
 
@@ -225,8 +225,8 @@
                     <div class="clearfix">
                         <!--Logo-->
                         <div class="logo float-left">
-                            <a href="index.html" class="img-responsive">
-                                <img src="assets/images/resources/logo-gema.png" alt="" title="">
+                            <a href="{{ route('home') }}" class="img-responsive">
+                                <img src="assets/images/footer/footer-logo-gema.png" alt="" title="">
                             </a>
                         </div>
                         <!--Right Col-->
@@ -246,7 +246,7 @@
                 <div class="menu-backdrop"></div>
                 <div class="close-btn"><span class="icon fa fa-times-circle"></span></div>
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src="assets/images/resources/mobilemenu-logo.png"
+                    <div class="nav-logo"><a href="{{ route('home') }}"><img src="assets/images/footer/footer-logo-gema.png"
                                 alt="" title=""></a></div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -309,22 +309,21 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                 <div class="single-footer-widget single-footer-widget--link-box marbtm50">
                                     <div class="title">
-                                        <h3>Explore</h3>
+                                        <h3>Explorar</h3>
                                     </div>
                                     <div class="footer-widget-links">
                                         <ul>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="team.html">Meet the Team</a></li>
-                                            <li><a href="cases.html">Case Stories</a></li>
-                                            <li><a href="blog.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
+                                            <li><a href="{{ route('servicios') }}">Servicios</a></li>
+                                            <li><a href="{{ route('portafolio') }}">Portafolio de proyectos</a></li>
+                                            <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>
-                                        <ul class="right">
+                                        <!--ul class="right">
                                             <li><a href="contact.html">Support</a></li>
                                             <li><a href="about.html">Terms of Use</a></li>
                                             <li><a href="about.html">Privacy Policy</a></li>
                                             <li><a href="contact.html">Help</a></li>
-                                        </ul>
+                                        </ul-->
                                     </div>
                                 </div>
                             </div>
@@ -360,12 +359,12 @@
                     <div class="container">
                         <div class="bottom-inner">
                             <div class="footer-logo-style1">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img src="assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                 </a>
                             </div>
                             <div class="copyright">
-                                <p>Copyright &copy; 2023 <a href="index.html">Gema: Software Solutions</a> Todos los
+                                <p>Copyright &copy; 2023 <a href="{{ route('home') }}">Gema: Software Solutions</a> Todos los
                                     derechos reservados.</p>
                             </div>
 
@@ -383,12 +382,12 @@
         </button>
 
         <!-- search-popup -->
-        <div id="search-popup" class="search-popup">
+        <!--div id="search-popup" class="search-popup">
             <div class="close-search"><i class="icon-close"></i></div>
             <div class="popup-inner">
                 <div class="overlay-layer"></div>
                 <div class="search-form">
-                    <form method="post" action="index.html">
+                    <form method="post" action="{{ route('home') }}">
                         <div class="form-group">
                             <fieldset>
                                 <input type="search" class="form-control" name="search-input" value=""
@@ -399,15 +398,15 @@
                     </form>
                     <h3>Recent Search Keywords</h3>
                     <ul class="recent-searches">
-                        <li><a href="index.html">waste</a></li>
-                        <li><a href="index.html">Dumpster</a></li>
-                        <li><a href="index.html">Zerowaste</a></li>
-                        <li><a href="index.html">Garbage</a></li>
-                        <li><a href="index.html">trash</a></li>
+                        <li><a href="{{ route('home') }}">waste</a></li>
+                        <li><a href="{{ route('home') }}">Dumpster</a></li>
+                        <li><a href="{{ route('home') }}">Zerowaste</a></li>
+                        <li><a href="{{ route('home') }}">Garbage</a></li>
+                        <li><a href="{{ route('home') }}">trash</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </div--s>
         <!-- search-popup end -->
     </div>
 

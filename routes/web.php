@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Home\HomeComponent;
 use App\Http\Livewire\Nosotros\NosotrosComponent;
 use App\Http\Livewire\Portafolio\PortafolioComponent;
+use App\Http\Controllers\Contacto\ContactoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,6 @@ use App\Http\Livewire\Portafolio\PortafolioComponent;
 */
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/nosotros', NosotrosComponent::class)->name('nosotros');
-Route::get('/portafolio/{servicio_id}', PortafolioComponent::class)->name('portafolio');
+Route::get('/servicios', HomeComponent::class)->name('servicios');
+Route::get('/portafolio', PortafolioComponent::class)->name('portafolio');
+Route::get('/contacto', [ContactoController::class, 'render'])->name('contacto');

@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use App\Http\Livewire\Contacto\ContactoComponent;
+use App\Http\Livewire\Contacto\SocialesComponent;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Livewire::component('contacto', ContactoComponent::class);
+        Livewire::component('sociales', SocialesComponent::class);
     }
 }
