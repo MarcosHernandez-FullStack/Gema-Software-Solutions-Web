@@ -20,10 +20,10 @@ class HomeComponent extends Component
 
     public function render()
     {
+        //inicializamos las variables
         $servicios = [];
         $ultimosProyectos  = [];
         try{
-            /* $servicios = $this->getServicioAll(); */
             $data = $this->getHome();
 
             $servicios = $data['servicios'];
@@ -33,11 +33,11 @@ class HomeComponent extends Component
                 ->extends('layouts.principal')
                 ->section('content');
         }catch(\Exception $e){
+            //retornamos solamente la vista en caso de errores al obtener los datos
             return view('livewire.home.home-component', compact('servicios', 'ultimosProyectos'))
                 ->extends('layouts.principal')
                 ->section('content');
         }
-        
     }
     
 
@@ -49,8 +49,12 @@ class HomeComponent extends Component
             if ($response->successful()) {
                 $data = $response->json();
                 return $data;
+            }else{
+                //si la respuesta no es correcta, entonces devuelve vacio
+                return [];
             }
         } catch (\Exception $e) {
+            //captura el error y devuelve vacio
             return [];
         }
     }

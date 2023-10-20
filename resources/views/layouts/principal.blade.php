@@ -174,152 +174,18 @@
                                 <nav class="main-menu style1 navbar-expand-md navbar-light">
                                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                         <ul class="navigation clearfix">
-                                            <li class="dropdown current"><a href="#"><span>INICIO</span></a>
-                                                <!-- <ul>
-                                                    <li><a href="index.html">Home Page 01</a></li>
-                                                    <li><a href="index-2.html">Home Page 02</a></li>
-                                                    <li><a href="index-onepage.html">Home OnePage</a></li>
-                                                    <li><a href="index-rtl.html">RTL Home</a></li>
-                                                    <li class="dropdown"><a href="#">Header Styles</a>
-                                                        <ul>
-                                                            <li><a href="index.html">Header Style One</a></li>
-                                                            <li><a href="index-2.html">Header Style Two</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul> -->
+                                            <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>NOSOTROS</span></a>
-                                                <!--  <div class="megamenu">
-                                                    <div class="row clearfix">
-                                                        <div class="col-xl-6 column">
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="about-element-1.html">About Block 01</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="about-element-2.html">About Block 02</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-1.html">
-                                                                        Service Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-2.html">
-                                                                        Service Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-3.html">
-                                                                        Service Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-1.html">
-                                                                        News Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-2.html">
-                                                                        News Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-3.html">
-                                                                        News Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="case-element-1.html">
-                                                                        Case Block 01
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xl-6 column">
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="case-element-2.html">
-                                                                        Case Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-1.html">
-                                                                        Team Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-2.html">
-                                                                        Team Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-3.html">
-                                                                        Team Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="testimonial-element-1.html">
-                                                                        Testimonials Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="testimonial-element-2.html">
-                                                                        Testimonials Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="partner-element-1.html">
-                                                                        Partner Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="faq-element-1.html">
-                                                                        FAQ'S Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="contact-element-1.html">
-                                                                        Contact Block
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
- -->
+                                            <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
+                                              
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>SERVICIOS</span></a>
-                                                <ul>
-                                                    <li><a href="services.html">View All Services</a></li>
-                                                    <li><a href="services-single-1.html">Consumer Product</a></li>
-                                                    <li><a href="services-single-2.html">Banking Advising</a></li>
-                                                    <li><a href="services-single-3.html">Marketing Rules</a></li>
-                                                    <li><a href="services-single-4.html">Business Growth</a></li>
-                                                    <li><a href="services-single-5.html">Audit Marketing</a></li>
-                                                    <li><a href="services-single-6.html">Financial Advice</a></li>
-                                                </ul>
+                                            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif"><a href="#"><span>SERVICIOS</span></a>
+                                        
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>PORTFOLIO</span></a>
-                                                <!--  <ul>
-                                                    <li><a href="about.html">About Our Company</a></li>
-                                                    <li><a href="cases.html">Cases Stories</a></li>
-                                                    <li><a href="case-details.html">Case Details</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                                    <li><a href="faq.html">FAQ’s</a></li>
-                                                    <li><a href="error.html">404 Error page</a></li>
-                                                </ul> -->
+                                            <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif"><a href="#"><span>PORTAFOLIO</span></a>
+                                                
                                             </li>
-                                            <!--  <li class="dropdown"><a href="#"><span>Blog</span></a>
-                                                <ul>
-                                                    <li><a href="blog.html">Blog Style 01</a></li>
-                                                    <li><a href="blog-2.html">Blog Style 02</a></li>
-                                                    <li><a href="blog-3.html">Blog Style 03</a></li>
-                                                    <li><a href="blog-single.html">Blog Details</a></li>
-                                                </ul>
-                                            </li> -->
-                                            <li><a href="contact.html"><span>CONTACTO</span></a></li>
+                                            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="contact.html"><span>CONTACTO</span></a></li>
                                         </ul>
                                     </div>
                                 </nav>
