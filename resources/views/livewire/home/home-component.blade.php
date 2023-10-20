@@ -95,7 +95,6 @@
                                 <h3>Sobre nosotros</h3>
                             </div>
                             <h2>Transformamos ideas<br> empieza hoy</h2>
-                            <button class="btn btn-primary" wire:click='boton()'>PULSAR AQUI</button>
                         </div>
                         <div class="inner-content">
                             <div class="top-text">
