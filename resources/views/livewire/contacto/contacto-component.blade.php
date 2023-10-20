@@ -4,9 +4,9 @@
         <div class="sec-title text-center">
             <div class="sub-title">
                 <div class="border-box"></div>
-                <h3>Contact with us</h3>
+                <h3>Contáctanos</h3>
             </div>
-            <h2>Write a Message</h2>
+            <h2>Escribe un mensaje</h2>
         </div>
         <div class="row">
             <div class="col-xl-12">
@@ -19,7 +19,7 @@
                                 <div class="form-group">
                                     <div class="input-box">
                                         <input type="text" name="form_name" id="formName"
-                                            placeholder="Full Name" required="">
+                                            placeholder="Nombre Completo" required="">
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="form-group">
                                     <div class="input-box">
                                         <input type="email" name="form_email" id="formEmail"
-                                            placeholder="Email Address" required="">
+                                            placeholder="Correo Electrónico" required="">
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <div class="input-box">
                                         <input type="text" name="form_phone" value="" id="formPhone"
-                                            placeholder="Phone">
+                                            placeholder="Teléfono">
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <div class="form-group">
                                     <div class="input-box">
                                         <input type="text" name="form_subject" value="" id="formSubject"
-                                            placeholder="Subject">
+                                            placeholder="Asunto">
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                     <div class="input-box">
                                         <textarea name="form_message" id="formMessage"
-                                            placeholder="Write a Message" required=""></textarea>
+                                            placeholder="Escribe un mensaje" required=""></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                         type="hidden" value="">
                                     <button class="btn-one" type="submit" data-loading-text="Please wait...">
                                         <span class="txt">
-                                            send a message
+                                            Enviar mensaje
                                         </span>
                                     </button>
                                 </div>
