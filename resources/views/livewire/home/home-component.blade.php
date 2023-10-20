@@ -221,14 +221,14 @@
     <!--End Service Style2 Area-->
 
     <!--Start Choose Area-->
-    <section class="choose-area">
+    <section class="choose-area pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="choose-img-box">
                         <div class="border-box float-bob-y"></div>
                         <div class="inner">
-                            <img src="assets/images/resources/choose-img-1.jpg" alt="">
+                            <img src="assets/images/beneficios/beneficios3.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -254,8 +254,7 @@
                                         </div>
                                         <div class="text">
                                             <h3>Digitalización de Procesos</h3>
-                                            <p>Creamos módulos específicos y a tu medida.
-                                            </p>
+                                            <p>Creamos módulos específicos y a tu medida.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -266,9 +265,18 @@
                                         </div>
                                         <div class="text">
                                             <h3>Gestión de la información</h3>
-                                            <p>Deja que el sistema haga
-                                                todo por ti.
-                                            </p>
+                                            <p>Deja que el sistema haga todo por ti.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <span class="icon-right-arrow"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h3>Presencia en línea.</h3>
+                                            <p>Conquista la web: Tu marca, tu historia, en línea.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -342,42 +350,34 @@
 
 
     <!--Start Partner Area-->
-    <section class="partner-area bg-white">
+    <!--section class="partner-area bg-white">
         <div class="container">
             <div class="brand-content">
                 <div class="inner">
                     <ul class="partner-box partner-carousel owl-carousel owl-theme owl-dot-style1 rtl-carousel">
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-1.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-2.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-3.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-4.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <!--End Partner Area-->
-
+    </section-->
+    @livewire('sociales')
+    @livewire('contacto')
 
     @foreach ($ultimosProyectos as $proyecto)
         <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
