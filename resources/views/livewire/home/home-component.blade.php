@@ -107,14 +107,10 @@
                             </div>
 
                             <div class="text-box">
-                                <p>GEMA es una agencia de desarrollo web en Perú que se especializa en la creación 
-                                    de sitios web innovadores y atractivos para el público. Nuestro equipo de desarrolladores
-                                     y diseñadores talentosos ofrece soluciones personalizadas para diferentes necesidades
-                                      comerciales. GEMA se dedica a elevar la presencia en línea y mejorar los resultados a través de servicios de desarrollo web de vanguardia.</p>
-                                <!--p>Somo un equipo listo para transformar tus ideas en soluciones digitales. En
+                                <p>Somos un equipo listo para transformar tus ideas en soluciones digitales. En
                                     Gema: Software Solutions, te ofrecemos asesoría experta para digitalizar tu
                                     negocio y nos encargamos de llevar a cabo la implementación.
-                                </p-->
+                                </p>
                             </div>
 
                             <div class="row">
@@ -376,6 +372,7 @@
             </div>
         </div>
     </section-->
+    @livewire('precios')
     @livewire('sociales')
     @livewire('contacto')
 
