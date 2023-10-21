@@ -203,8 +203,73 @@ img {
     color: #121212;
 }
 
+.pricing {
+    background: #fff;
+    padding: 30px;
+}
 
+.text-black {
+    color: var(--thm-black) !important;
+}
 
+.pricing .price>span {
+    color: #cccccc;
+}
+
+.pricing .price>span>span {
+    font-size: 3rem;
+    color: var(--thm-base);
+}
+
+.pricing ul li {
+    margin-bottom: 20px;
+}
+
+.pricing-popular .pricing {
+    -webkit-box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.ul-check {
+    margin-bottom: 50px;
+}
+
+.ul-check li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.ul-check li:before {
+    left: 0;
+    font-size: 20px;
+    top: -.3rem;
+    font-family: "icomoon";
+    content: "\e5ca";
+    position: absolute;
+}
+
+.ul-check.white li:before {
+    color: #fff;
+}
+
+.ul-check.success li:before {
+    color: #71bc42;
+}
+
+.ul-check.primary li:before {
+    color: #007bff;
+}
+
+.ul-check li.remove {
+    text-decoration: line-through;
+    color: #dee2e6;
+}
+
+.ul-check li.remove:before {
+    color: #dee2e6;
+}
 
 i {
     font-style: normal;
@@ -2374,7 +2439,7 @@ select:focus {
     text-align: center;
     font-family: var(--thm-font);
     counter-increment: count;
-    content: "0"counter(count);
+    content: "0" counter(count);
     transition: all 100ms linear;
     transition-delay: 0.1s;
 }

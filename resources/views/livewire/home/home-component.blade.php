@@ -13,15 +13,15 @@
                         <div class="content">
                             <div class="big-title">
                                 <h2>
-                                    Consulting<span class="dotted"></span><br>
-                                    Financial<span class="dotted"></span><br>
-                                    Advice<span class="dotted"></span>
+                                    Competitividad<span class="dotted"></span><br>
+                                    Innovación<span class="dotted"></span><br>
+                                    Personalización<span class="dotted"></span>
                                 </h2>
                             </div>
                             <div class="btns-box">
                                 <a class="btn-one" href="about.html">
                                     <span class="txt">
-                                        discover more<i class="icon-refresh arrow"></i>
+                                        Descubre más<i class="icon-refresh arrow"></i>
                                     </span>
                                 </a>
                             </div>
@@ -37,15 +37,15 @@
                         <div class="content">
                             <div class="big-title">
                                 <h2>
-                                    Sultin Best<span class="dotted"></span><br>
-                                    Consulting<span class="dotted"></span><br>
-                                    Services<span class="dotted"></span>
+                                    Automatización<span class="dotted"></span><br>
+                                    Conectividad<span class="dotted"></span><br>
+                                    Accesibilidad<span class="dotted"></span>
                                 </h2>
                             </div>
                             <div class="btns-box">
                                 <a class="btn-one" href="about.html">
                                     <span class="txt">
-                                        discover more<i class="icon-refresh arrow"></i>
+                                        Descubre más<i class="icon-refresh arrow"></i>
                                     </span>
                                 </a>
                             </div>
@@ -61,15 +61,15 @@
                         <div class="content">
                             <div class="big-title">
                                 <h2>
-                                    Consulting<span class="dotted"></span><br>
-                                    Financial<span class="dotted"></span><br>
-                                    Advice<span class="dotted"></span>
+                                    Transformación Digital<span class="dotted"></span><br>
+                                    Interconexión<span class="dotted"></span><br>
+                                    Escalabilidad<span class="dotted"></span>
                                 </h2>
                             </div>
                             <div class="btns-box">
                                 <a class="btn-one" href="about.html">
                                     <span class="txt">
-                                        discover more<i class="icon-refresh arrow"></i>
+                                        Descubre más<i class="icon-refresh arrow"></i>
                                     </span>
                                 </a>
                             </div>
@@ -85,7 +85,7 @@
     <!--Start About Style2 Area-->
     <section class="about-style2-area">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
 
                 <div class="col-xl-6">
                     <div class="about-style2__content">
@@ -95,7 +95,6 @@
                                 <h3>Sobre nosotros</h3>
                             </div>
                             <h2>Transformamos ideas<br> empieza hoy</h2>
-                            <button class="btn btn-primary" wire:click='boton()'>PULSAR AQUI</button>
                         </div>
                         <div class="inner-content">
                             <div class="top-text">
@@ -108,7 +107,7 @@
                             </div>
 
                             <div class="text-box">
-                                <p>Somo un equipo listo para transformar tus ideas en soluciones digitales. En
+                                <p>Somos un equipo listo para transformar tus ideas en soluciones digitales. En
                                     Gema: Software Solutions, te ofrecemos asesoría experta para digitalizar tu
                                     negocio y nos encargamos de llevar a cabo la implementación.
                                 </p>
@@ -143,7 +142,7 @@
 
                             <div class="btn-box">
                                 <a class="btn-one" href="about.html">
-                                    <span class="txt">Discover More</span>
+                                    <span class="txt">Descubre más</span>
                                 </a>
                             </div>
 
@@ -157,12 +156,12 @@
                         <div class="shape-2"></div>
                         <div class="border-box float-bob-y"></div>
                         <div class="inner">
-                            <img src="assets/images/about/about-style2__image-1.jpg" alt="">
+                            <img src="assets/images/about/transformacion_digital2.jpg" alt="">
                             <div class="overlay-content">
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="3000" data-stop="4800">0</span>
+                                    <span class="count-text" data-speed="300" data-stop="10">0</span>
                                 </div>
-                                <h3>Projects Completed</h3>
+                                <h3>Proyectos Completados</h3>
                             </div>
                         </div>
                     </div>
@@ -218,14 +217,14 @@
     <!--End Service Style2 Area-->
 
     <!--Start Choose Area-->
-    <section class="choose-area">
+    <section class="choose-area pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="choose-img-box">
                         <div class="border-box float-bob-y"></div>
                         <div class="inner">
-                            <img src="assets/images/resources/choose-img-1.jpg" alt="">
+                            <img src="assets/images/beneficios/beneficios3.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -251,8 +250,7 @@
                                         </div>
                                         <div class="text">
                                             <h3>Digitalización de Procesos</h3>
-                                            <p>Creamos módulos específicos y a tu medida.
-                                            </p>
+                                            <p>Creamos módulos específicos y a tu medida.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -263,9 +261,18 @@
                                         </div>
                                         <div class="text">
                                             <h3>Gestión de la información</h3>
-                                            <p>Deja que el sistema haga
-                                                todo por ti.
-                                            </p>
+                                            <p>Deja que el sistema haga todo por ti.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <span class="icon-right-arrow"></span>
+                                        </div>
+                                        <div class="text">
+                                            <h3>Presencia en línea.</h3>
+                                            <p>Conquista la web: Tu marca, tu historia, en línea.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -339,42 +346,35 @@
 
 
     <!--Start Partner Area-->
-    <section class="partner-area bg-white">
+    <!--section class="partner-area bg-white">
         <div class="container">
             <div class="brand-content">
                 <div class="inner">
                     <ul class="partner-box partner-carousel owl-carousel owl-theme owl-dot-style1 rtl-carousel">
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-1.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-2.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-3.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
                         <li class="single-partner-logo-box">
                             <a href="#"><img src="assets/images/brand/brand-logo-4.png"
                                     alt="Awesome Image"></a>
                         </li>
-                        <!--End Single Partner Logo Box-->
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <!--End Partner Area-->
-
+    </section-->
+    @livewire('precios')
+    @livewire('sociales')
+    @livewire('contacto')
 
     @foreach ($ultimosProyectos as $proyecto)
         <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"

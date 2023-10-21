@@ -155,7 +155,7 @@
                         <!--Start Header Left-->
                         <div class="header-left">
                             <div class="main-logo-box">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img src="/assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                 </a>
                             </div>
@@ -174,152 +174,18 @@
                                 <nav class="main-menu style1 navbar-expand-md navbar-light">
                                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                         <ul class="navigation clearfix">
-                                            <li class="dropdown current"><a href="#"><span>INICIO</span></a>
-                                                <!-- <ul>
-                                                    <li><a href="index.html">Home Page 01</a></li>
-                                                    <li><a href="index-2.html">Home Page 02</a></li>
-                                                    <li><a href="index-onepage.html">Home OnePage</a></li>
-                                                    <li><a href="index-rtl.html">RTL Home</a></li>
-                                                    <li class="dropdown"><a href="#">Header Styles</a>
-                                                        <ul>
-                                                            <li><a href="index.html">Header Style One</a></li>
-                                                            <li><a href="index-2.html">Header Style Two</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul> -->
+                                            <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>NOSOTROS</span></a>
-                                                <!--  <div class="megamenu">
-                                                    <div class="row clearfix">
-                                                        <div class="col-xl-6 column">
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="about-element-1.html">About Block 01</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="about-element-2.html">About Block 02</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-1.html">
-                                                                        Service Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-2.html">
-                                                                        Service Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="service-element-3.html">
-                                                                        Service Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-1.html">
-                                                                        News Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-2.html">
-                                                                        News Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="news-element-3.html">
-                                                                        News Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="case-element-1.html">
-                                                                        Case Block 01
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xl-6 column">
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="case-element-2.html">
-                                                                        Case Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-1.html">
-                                                                        Team Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-2.html">
-                                                                        Team Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="team-element-3.html">
-                                                                        Team Block 03
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="testimonial-element-1.html">
-                                                                        Testimonials Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="testimonial-element-2.html">
-                                                                        Testimonials Block 02
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="partner-element-1.html">
-                                                                        Partner Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="faq-element-1.html">
-                                                                        FAQ'S Block 01
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="contact-element-1.html">
-                                                                        Contact Block
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
- -->
+                                            <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
+                                              
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>SERVICIOS</span></a>
-                                                <ul>
-                                                    <li><a href="services.html">View All Services</a></li>
-                                                    <li><a href="services-single-1.html">Consumer Product</a></li>
-                                                    <li><a href="services-single-2.html">Banking Advising</a></li>
-                                                    <li><a href="services-single-3.html">Marketing Rules</a></li>
-                                                    <li><a href="services-single-4.html">Business Growth</a></li>
-                                                    <li><a href="services-single-5.html">Audit Marketing</a></li>
-                                                    <li><a href="services-single-6.html">Financial Advice</a></li>
-                                                </ul>
+                                            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif"><a href="{{ route('servicios') }}"><span>SERVICIOS</span></a>
+                                        
                                             </li>
-                                            <li class="dropdown"><a href="#"><span>PORTFOLIO</span></a>
-                                                <!--  <ul>
-                                                    <li><a href="about.html">About Our Company</a></li>
-                                                    <li><a href="cases.html">Cases Stories</a></li>
-                                                    <li><a href="case-details.html">Case Details</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                                    <li><a href="faq.html">FAQ’s</a></li>
-                                                    <li><a href="error.html">404 Error page</a></li>
-                                                </ul> -->
+                                            <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif"><a href="{{ route('portafolio') }}"><span>PORTAFOLIO</span></a>
+                                                
                                             </li>
-                                            <!--  <li class="dropdown"><a href="#"><span>Blog</span></a>
-                                                <ul>
-                                                    <li><a href="blog.html">Blog Style 01</a></li>
-                                                    <li><a href="blog-2.html">Blog Style 02</a></li>
-                                                    <li><a href="blog-3.html">Blog Style 03</a></li>
-                                                    <li><a href="blog-single.html">Blog Details</a></li>
-                                                </ul>
-                                            </li> -->
-                                            <li><a href="contact.html"><span>CONTACTO</span></a></li>
+                                            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -337,14 +203,14 @@
                                     <span class="icon-phone-call"></span>
                                 </div>
                                 <div class="phone">
-                                    <a href="tel:123456789">+51 968 372 292</a>
+                                    <a href="tel:+51968372292">+51 968 372 292</a>
                                 </div>
                             </div>
-                            <div class="serach-button-style1">
+                            <!--div class="serach-button-style1">
                                 <button type="button" class="search-toggler">
                                     <i class="icon-magnifying-glass"></i>
                                 </button>
-                            </div>
+                            </div-->
                         </div>
                         <!--End Header Right-->
 
@@ -359,8 +225,8 @@
                     <div class="clearfix">
                         <!--Logo-->
                         <div class="logo float-left">
-                            <a href="index.html" class="img-responsive">
-                                <img src="assets/images/resources/logo-gema.png" alt="" title="">
+                            <a href="{{ route('home') }}" class="img-responsive">
+                                <img src="assets/images/footer/footer-logo-gema.png" alt="" title="">
                             </a>
                         </div>
                         <!--Right Col-->
@@ -380,7 +246,7 @@
                 <div class="menu-backdrop"></div>
                 <div class="close-btn"><span class="icon fa fa-times-circle"></span></div>
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src="assets/images/resources/mobilemenu-logo.png"
+                    <div class="nav-logo"><a href="{{ route('home') }}"><img src="assets/images/footer/footer-logo-gema.png"
                                 alt="" title=""></a></div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -443,22 +309,21 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                 <div class="single-footer-widget single-footer-widget--link-box marbtm50">
                                     <div class="title">
-                                        <h3>Explore</h3>
+                                        <h3>Explorar</h3>
                                     </div>
                                     <div class="footer-widget-links">
                                         <ul>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="team.html">Meet the Team</a></li>
-                                            <li><a href="cases.html">Case Stories</a></li>
-                                            <li><a href="blog.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
+                                            <li><a href="{{ route('servicios') }}">Servicios</a></li>
+                                            <li><a href="{{ route('portafolio') }}">Portafolio de proyectos</a></li>
+                                            <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>
-                                        <ul class="right">
+                                        <!--ul class="right">
                                             <li><a href="contact.html">Support</a></li>
                                             <li><a href="about.html">Terms of Use</a></li>
                                             <li><a href="about.html">Privacy Policy</a></li>
                                             <li><a href="contact.html">Help</a></li>
-                                        </ul>
+                                        </ul-->
                                     </div>
                                 </div>
                             </div>
@@ -494,12 +359,12 @@
                     <div class="container">
                         <div class="bottom-inner">
                             <div class="footer-logo-style1">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img src="assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                 </a>
                             </div>
                             <div class="copyright">
-                                <p>Copyright &copy; 2023 <a href="index.html">Gema: Software Solutions</a> Todos los
+                                <p>Copyright &copy; 2023 <a href="{{ route('home') }}">Gema: Software Solutions</a> Todos los
                                     derechos reservados.</p>
                             </div>
 
@@ -517,12 +382,12 @@
         </button>
 
         <!-- search-popup -->
-        <div id="search-popup" class="search-popup">
+        <!--div id="search-popup" class="search-popup">
             <div class="close-search"><i class="icon-close"></i></div>
             <div class="popup-inner">
                 <div class="overlay-layer"></div>
                 <div class="search-form">
-                    <form method="post" action="index.html">
+                    <form method="post" action="{{ route('home') }}">
                         <div class="form-group">
                             <fieldset>
                                 <input type="search" class="form-control" name="search-input" value=""
@@ -533,15 +398,15 @@
                     </form>
                     <h3>Recent Search Keywords</h3>
                     <ul class="recent-searches">
-                        <li><a href="index.html">waste</a></li>
-                        <li><a href="index.html">Dumpster</a></li>
-                        <li><a href="index.html">Zerowaste</a></li>
-                        <li><a href="index.html">Garbage</a></li>
-                        <li><a href="index.html">trash</a></li>
+                        <li><a href="{{ route('home') }}">waste</a></li>
+                        <li><a href="{{ route('home') }}">Dumpster</a></li>
+                        <li><a href="{{ route('home') }}">Zerowaste</a></li>
+                        <li><a href="{{ route('home') }}">Garbage</a></li>
+                        <li><a href="{{ route('home') }}">trash</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </div--s>
         <!-- search-popup end -->
     </div>
 
