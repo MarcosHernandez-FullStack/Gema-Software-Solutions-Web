@@ -182,7 +182,7 @@
                                             <li class=" @if(Route::currentRouteName() === 'servicios') current @endif"><a href="{{ route('servicios') }}"><span>SERVICIOS</span></a>
                                         
                                             </li>
-                                            <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif"><a href="{{ route('portafolio') }}"><span>PORTAFOLIO</span></a>
+                                            <li class=" @if(Route::currentRouteName() === 'proyectos') current @endif"><a href="{{ route('proyectos') }}"><span>PORTAFOLIO</span></a>
                                                 
                                             </li>
                                             <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
@@ -315,7 +315,7 @@
                                         <ul>
                                             <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
                                             <li><a href="{{ route('servicios') }}">Servicios</a></li>
-                                            <li><a href="{{ route('portafolio') }}">Portafolio de proyectos</a></li>
+                                            <li><a href="{{ route('proyectos') }}">Portafolio de proyectos</a></li>
                                             <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>
                                         <!--ul class="right">
