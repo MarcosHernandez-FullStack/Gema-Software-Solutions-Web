@@ -1,29 +1,29 @@
 <?php
 
-namespace App\Http\Livewire\Nosotros;
+namespace App\Http\Livewire\Portafolio;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 
-class NosotrosComponent extends Component
-{   
+class ProyectosComponent extends Component
+{
     public function render()
     {
         //inicializamos las variables
-        $servicios = [];
-       
+        
+        $ultimosProyectos  = [];
         try{
             $data = $this->getHome();
 
             $servicios = $data['servicios'];
-            
-
-            return view('livewire.nosotros.nosotros-component', compact('servicios'))
+            $ultimosProyectos  = $data['ultimosProyectos'];
+            return view('livewire.portafolio.proyectos-component', compact('servicios','ultimosProyectos'))
             ->extends('layouts.principal')
             ->section('content');
+            
         }catch(\Exception $e){
             //retornamos solamente la vista en caso de errores al obtener los datos
-            return view('livewire.nosotros.nosotros-component', compact('servicios'))
+            return view('livewire.portafolio.proyectos-component', compact('servicios','ultimosProyectos'))
             ->extends('layouts.principal')
             ->section('content');
         }
@@ -47,11 +47,5 @@ class NosotrosComponent extends Component
             return [];
         }
     }
-    /*public function render()
-    {  
-        
-        return view('livewire.nosotros.nosotros-component')
-            ->extends('layouts.principal')
-            ->section('content');
-    }*/
+    
 }
