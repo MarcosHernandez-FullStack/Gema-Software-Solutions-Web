@@ -13,7 +13,7 @@
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
                                 <li><a href="{{ route('servicios') }}">Servicios</a></li>
-                                <li class="active">Consumer Product</li>
+                                <li class="active">{{$servicio['nombre']}}</li>
                             </ul>
                         </div>
                         <div class="title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
@@ -33,11 +33,11 @@
             <div class="row">
 
                 <!--Start Service Details Sidebar -->
-                <div class="col-xl-4 col-lg-5 order-box-2">
+                <div class="col-xl-4 col-lg-5 order-box-2" >
                     <div class="service-details__sidebar">
 
-                        <div class="view-all-service">
-                            <ul class="service-pages">
+                        <div class="view-all-service" >
+                            <ul class="service-pages" >
                                 @foreach ($listaServicios as $item)
                                     <li class="{{ $item['bEstado'] ? 'active' : '' }}">
                                         {{-- <a href="#" onclick="return false;" wire:click="cambioServicioId($item['id'])">
@@ -46,7 +46,11 @@
                                         {{-- <button  wire:click="cambioServicioId({{$item['id']}})">  <a href="#" onclick="return false;">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                         </a></button> --}}
-                                        <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} <span class="icon-right-arrow"></span></button>
+                                        <a href="#" class="active">
+                                            
+                                            <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
+                                        </a> 
+                                        {{--<button class="active" wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} <span class="icon-right-arrow"></span></button>--}}
 
                                     </li>
                                 @endforeach
@@ -60,11 +64,11 @@
                             <div class="icon">
                                 <span class="icon-phone-call"></span>
                             </div>
-                            <h3>Contact with<br> us for any<br> advice</h3>
-                            <h2><a href="tel:+50033333">+3-(856) 000-9850</a></h2>
+                            <h3>Contactanos</h3>
+                            <h2><a href="https://wa.me/+51968372292" target="_blank">+51 968 372 292</a></h2>
                         </div>
 
-                        <div class="info-download-box">
+                        <!--<div class="info-download-box">
                             <ul>
                                 <li>
                                     <div class="icon">
@@ -75,7 +79,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>
@@ -86,6 +90,7 @@
                     <div class="service-details__content">
                         <div class="img-box-outer">
                             <div class="img-box1">
+                                <!--$servicio['ruta_foto_principal']   {}-->
                                 <img src="{{$servicio['ruta_foto_principal']}}" alt="" />
                             </div>
                             <div class="icon">
@@ -94,7 +99,9 @@
                         </div>
 
                         <div class="text-box1">
+                            
                             <h2>{{ $servicio['nombre'] }}</h2>
+                           
                             <p>
                                 {{ $servicio['descripcion_amplia'] }}
                             </p>
@@ -247,12 +254,13 @@
                                     </ul>
                                 </div>
                                 <h3>
-                                    <a href="#" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
                                         {{ $proyecto['nombre'] }}
                                     </a>
                                 </h3>
                                 <div class="btn-box">
-                                    <a href="blog-single.html">{{ $proyecto['servicio'] }}</a>
+                                    <!--blog-single.html-->
+                                    <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
                                 </div>
                             </div>
                         </div>
@@ -267,5 +275,88 @@
     </section>
     <!--End Blog Style1 Area-->
 
-
+    @foreach ($ultimosProyectos as $proyecto)
+    <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
+        aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
+                        {{ $proyecto['nombre'] }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   {{--  @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                    {{$detalle['ruta_foto']}}
+                    @endforeach --}}
+                    <div id="carouselExample{{ $proyecto['id'] }}" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                    <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
+                                        alt="Detalle {{ $index + 1 }}">
+                                </div>
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}"
+                            role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="sr-only" style="color:black">Previous</span>
+                            {{--  <p style="color:black"><</p> --}}
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}"
+                            role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Next</span>
+                             
+    
+                        </a>
+                    </div>
+                </div>
+                {{--    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+    @endforeach
 </div>
+
+@section('nav')
+<nav class="main-menu style1 navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+        <ul class="navigation clearfix">
+            <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
+            </li>
+            <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
+              
+            </li>
+            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif dropdown"><a href="#"><span>SERVICIOS</span></a>
+                <ul>
+                    @foreach ($listaServicios as $item)
+                    <li ><a href="{{ route('portafolio',$item['id']) }}" class="active">{{ $item['nombre'] }}</a></li>
+                    
+                    {{--<li><a href="services-single-1.html">Consumer Product</a></li>
+                    <li><a href="services-single-2.html">Banking Advising</a></li>
+                    <li><a href="services-single-3.html">Marketing Rules</a></li>
+                    <li><a href="services-single-4.html">Business Growth</a></li>
+                    <li><a href="services-single-5.html">Audit Marketing</a></li>
+                    <li><a href="services-single-6.html">Financial Advice</a></li>--}}
+                    @endforeach
+                </ul>
+            </li>
+            
+                
+            
+            <li class=" @if(Route::currentRouteName() === 'proyectos') current @endif"><a href="{{ route('proyectos') }}"><span>PORTAFOLIO</span></a>
+                
+            </li>
+            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
+        </ul>
+    </div>
+</nav>
+@endsection
+
+
