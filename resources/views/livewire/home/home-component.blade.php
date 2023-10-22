@@ -185,33 +185,60 @@
                 <h2>Adquiere soluciones a tu medida </h2>
             </div>
             <div class="row text-right-rtl">
-                <!--Start Single Service Style2-->
-                  @foreach ($servicios as $servicio)
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="single-service-style2">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{{$servicio['ruta_foto_principal']}}" alt="">
-                                </div>
-                                <div class="icon">
-                                    <span class="icon-creative"></span>
-                                </div>
-                            </div>
-                            <div class="title-holder">
-                                <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}">{{$servicio['descripcion']}}</a></h3>
-                                <div class="text">
-                                    <p>
-                                        {{$servicio['detalle_descripcion_resumida']}}
-                                    </p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}"><span class="icon-right-arrow"></span></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-xl-12">
+                    <div class="theme_carousel news-element-carousel owl-theme owl-carousel owl-nav-style-one rtl-carousel"
+                            data-options='{
+                                    "loop": true, 
+                                    "margin": 30, 
+                                    "autoheight":true, 
+                                    "lazyload":true, 
+                                    "nav": true, 
+                                    "dots": false, 
+                                    "autoplay": true, 
+                                    "autoplayTimeout": 5000, 
+                                    "smartSpeed": 500, 
+                                    "navText": ["<span class=\"left icon-right-arrow\"></span>",
+                                    "<span class=\"right icon-right-arrow\"></span>"], 
+                                    "responsive":{ 
+                                    "0" :{ "items": "1" }, 
+                                    "600" :{ "items" : "1" }, 
+                                    "768" :{ "items" : "2" }, 
+                                    "992":{ "items" : "2" }, 
+                                    "1200":{ "items" : "3" }
+                                }
+                            }'>
+                            <!--Start Single Service Style2-->
+                            @foreach ($servicios as $servicio)
+                                <!--<div class="col-xl-4 col-lg-4 wow fadeInUp bg-green" data-wow-delay="00ms" data-wow-duration="1500ms">-->
+                                    <div class="single-service-style2 "  >
+                                        <div class="img-holder">
+                                            <div class="inner">
+                                                <img src="{{$servicio['ruta_foto_principal']}}" alt="">
+                                            </div>
+                                            <div class="icon">
+                                                <span class="icon-creative"></span>
+                                            </div>
+                                        </div>
+                                        <div class="title-holder">
+                                            <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}">{{$servicio['nombre']}}</a></h3>
+                                            <div class="text">
+                                                <p>
+                                                    {{$servicio['descripcion_resumida']}}
+                                                </p>
+                                            </div>
+                                            <!--['servicio_id' => $servicio['id']-->
+                                            <div class="btn-box">
+                                                <a href="{{ route('portafolio',$servicio['id']) }}"><span class="icon-right-arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!--</div>-->
+                            @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
+            
+            
         </div>
     </section>
     <!--End Service Style2 Area-->
@@ -300,12 +327,12 @@
                 <h2>Últimos proyectos</h2>
             </div>
             <div class="row">
-
+                
 
                 @foreach ($ultimosProyectos as $proyecto)
                     <!--Start Single Blog Style1-->
                     <div class="col-xl-4 col-lg-12">
-                        <div class="single-blog-style1">
+                        <div class="single-blog-style1" data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1000">
                             <div class="img-holder">
                                 <img src="{{$proyecto['ruta_foto']}}" alt="">
                                 <div class="date-box">
@@ -325,7 +352,7 @@
                                 </div>
                                 <h3>
                                     <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
-                                        {{ $proyecto['descripcion'] }}
+                                        {{ $proyecto['nombre'] }}
                                     </a>
                                 </h3>
                                 <div class="btn-box">
@@ -383,7 +410,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
-                            {{ $proyecto['descripcion'] }}</h5>
+                            {{ $proyecto['nombre'] }}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

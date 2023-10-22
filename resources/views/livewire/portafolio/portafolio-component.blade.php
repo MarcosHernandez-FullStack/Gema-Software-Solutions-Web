@@ -46,7 +46,7 @@
                                         {{-- <button  wire:click="cambioServicioId({{$item['id']}})">  <a href="#" onclick="return false;">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                         </a></button> --}}
-                                        <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['descripcion'] }} <span class="icon-right-arrow"></span></button>
+                                        <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} <span class="icon-right-arrow"></span></button>
 
                                     </li>
                                 @endforeach
@@ -94,9 +94,9 @@
                         </div>
 
                         <div class="text-box1">
-                            <h2>{{ $servicio['descripcion'] }}</h2>
+                            <h2>{{ $servicio['nombre'] }}</h2>
                             <p>
-                                {{ $servicio['detalle_descripcion_amplia'] }}
+                                {{ $servicio['descripcion_amplia'] }}
                             </p>
 
                         </div>
@@ -131,14 +131,14 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="img-box">
-                                        <img style=" width: 370px; height: 320px" src="{{$servicio['ruta_foto_detalle']}}"
+                                        <img style=" width: 370px; height: 320px" src="{{$servicio['ruta_foto_secundaria']}}"
                                             alt="" />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="content-box">
                                         <h2>Beneficios del Servicio</h2>
-                                        <p>Los beneficios que brinda el servicio {{$servicio['descripcion']}} son:
+                                        <p>Los beneficios que brinda el servicio {{$servicio['nombre']}} son:
                                         </p>
 
                                         <ul>
@@ -248,7 +248,7 @@
                                 </div>
                                 <h3>
                                     <a href="#" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
-                                        {{ $proyecto['descripcion'] }}
+                                        {{ $proyecto['nombre'] }}
                                     </a>
                                 </h3>
                                 <div class="btn-box">
