@@ -85,7 +85,7 @@
     </div>
 </section>
 <!--End Main Contact Form Area-->
-@section('nav')
+{{-- @section('nav')
 <nav class="main-menu style1 navbar-expand-md navbar-light">
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
@@ -112,4 +112,4 @@
     </div>
 </nav>
     
-@endsection
+@endsection --}}

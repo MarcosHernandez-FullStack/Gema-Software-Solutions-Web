@@ -1,4 +1,5 @@
 <div>
+    
     <!-- Start Main Slider -->
     <section class="main-slider style1">
         <div class="slider-box">
@@ -475,7 +476,7 @@
         </div>
     @endforeach
 </div>
-@section('nav')
+{{-- @section('nav')
 <nav class="main-menu style1 navbar-expand-md navbar-light">
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
@@ -501,4 +502,4 @@
         </ul>
     </div>
 </nav>
-@endsection
+@endsection --}}
