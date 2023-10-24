@@ -324,7 +324,7 @@
     @endforeach
 </div>
 
-@section('nav')
+{{-- @section('nav')
 <nav class="main-menu style1 navbar-expand-md navbar-light">
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
@@ -337,13 +337,7 @@
                 <ul>
                     @foreach ($listaServicios as $item)
                     <li ><a href="{{ route('portafolio',$item['id']) }}" class="active">{{ $item['nombre'] }}</a></li>
-                    
-                    {{--<li><a href="services-single-1.html">Consumer Product</a></li>
-                    <li><a href="services-single-2.html">Banking Advising</a></li>
-                    <li><a href="services-single-3.html">Marketing Rules</a></li>
-                    <li><a href="services-single-4.html">Business Growth</a></li>
-                    <li><a href="services-single-5.html">Audit Marketing</a></li>
-                    <li><a href="services-single-6.html">Financial Advice</a></li>--}}
+                  
                     @endforeach
                 </ul>
             </li>
@@ -357,6 +351,6 @@
         </ul>
     </div>
 </nav>
-@endsection
+@endsection --}}
 
 

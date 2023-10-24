@@ -1,4 +1,5 @@
 <div>
+   {{--  @livewire("layouts.header-component") --}}
             <!--Start breadcrumb area paroller-->
             <section class="breadcrumb-area">
                 <div class="breadcrumb-area-bg" style="background-image: url(assets/images/about/nosotros.jpg);background-size: 100% 100%;">
@@ -116,7 +117,7 @@
     
     
 </div>
-@section('nav')
+{{-- @section('nav')
 <nav class="main-menu style1 navbar-expand-md navbar-light">
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
@@ -143,5 +144,5 @@
     </div>
 </nav>
     
-@endsection
+@endsection --}}
 
