@@ -20,7 +20,7 @@ use App\Http\Livewire\Portafolio\ProyectosComponent;
 */
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/nosotros', NosotrosComponent::class)->name('nosotros');
-Route::get('/servicios', HomeComponent::class)->name('servicios');
+//Route::get('/servicios', HomeComponent::class)->name('servicios');
 Route::get('/portafolio/{servicio_id}', PortafolioComponent::class)->name('portafolio');
 Route::get('/portafolio', ProyectosComponent::class)->name('proyectos');
 /*Route::get('/portafolio', [PortafolioController::class, 'render'])->name('proyectos');*/

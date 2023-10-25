@@ -83,7 +83,7 @@
 
 .about-style1__image .inner img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
     -webkit-transition: all 0.4s cubic-bezier(0.3, 0.02, 0, 0.6);
     transition: all 0.4s cubic-bezier(0.3, 0.02, 0, 0.6);
 }
@@ -448,7 +448,7 @@
 .about-style2__image .inner img {
     width: 100%;
     transition: all 2500ms ease 100ms;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
 
 }
 

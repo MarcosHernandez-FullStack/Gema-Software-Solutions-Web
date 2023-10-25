@@ -38,7 +38,7 @@
 
 .single-team-style1 .img-holder .inner img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
     transition: all 500ms linear;
     transition-delay: 0.2s;
 }

@@ -350,7 +350,7 @@
 .single-service-style2 .img-holder .inner img {
     width: 100%;
     transform: scale(1.0);
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
     transition: all 700ms ease;
 }
 
@@ -578,6 +578,7 @@
     transition: all 200ms linear;
     transition-delay: 0.1s;
     z-index: 1;
+    cursor:pointer;
 }
 
 .view-all-service .service-pages li.active a,
@@ -859,7 +860,7 @@
 
 .service-details__content .img-box1 img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
 }
 
 .service-details__content .img-box1:hover img {
@@ -945,7 +946,7 @@
 
 .service-details__content .text-box4 .img-box img {
     width: 100%;
-    /* mix-blend-mode: luminosity; */
+    /*mix-blend-mode: luminosity;*/
 }
 
 

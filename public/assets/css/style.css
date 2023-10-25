@@ -2472,7 +2472,7 @@ select:focus {
 
 .working-process__single .img-holder .inner img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -2585,7 +2585,7 @@ select:focus {
 
 .case-stories__single .img-box img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
 }
 
 .case-stories__single:hover .img-box img {
@@ -3051,7 +3051,7 @@ select:focus {
 
 .company-benefits-content .bottom-content .img-box img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
 }
 
 .company-benefits-content .bottom-content .inner-text {
@@ -3120,7 +3120,7 @@ select:focus {
 
 .company-benefits-img-box .inner img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
 }
 
 .company-benefits-img-box .inner .logo-box {
@@ -3223,7 +3223,7 @@ select:focus {
     width: 100%;
     transform: scale(1.0);
     transition: all 2700ms ease;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
 }
 
 .choose-img-box .inner:hover img {
@@ -3653,7 +3653,7 @@ select:focus {
 
 .case-deatils__img-box img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/;
 }
 
 .case-info-content {

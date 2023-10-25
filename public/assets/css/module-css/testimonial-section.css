@@ -91,7 +91,7 @@
 
 .single-testimonial-style1 .bottom-box .client-img .inner img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /*mix-blend-mode: luminosity;*/
 }
 
 .single-testimonial-style1:hover .bottom-box .client-img .inner img {

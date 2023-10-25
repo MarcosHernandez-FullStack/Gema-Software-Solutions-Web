@@ -179,7 +179,7 @@
 
 
     <!--Start Service Style2 Area-->
-    <section class="service-style2-area">
+    <section class="service-style2-area" id="servicios-seccion">
         <div class="service-style2--primary-bg"></div>
         <div class="container">
             <div class="sec-title text-center">

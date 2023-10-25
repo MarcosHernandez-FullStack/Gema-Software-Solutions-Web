@@ -106,7 +106,7 @@
                                     <h2>Ofrecemos la Mejor<br> Experiencia de Usuario (UI/UX)</h2>
                                 </div>
                                 <div class="button-box">
-                                    <a class="btn-one" href="{{ route('servicios')}}"><span class="txt">Descubre Más</span></a>
+                                    <a class="btn-one" href="{{ route('proyectos')}}"><span class="txt">Descubre Más</span></a>
                                 </div>
                             </div>
                         </div>

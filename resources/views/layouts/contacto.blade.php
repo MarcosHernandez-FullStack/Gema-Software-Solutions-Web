@@ -14,12 +14,12 @@
 
                         <div class="breadcrumb-menu">
                             <ul>
-                                <li><a href="{{ route('home') }}">Home</a></li>
-                                <li class="active">Contact</li>
+                                <li><a href="{{ route('home') }}">Inicio</a></li>
+                                <li class="active">Contacto</li>
                             </ul>
                         </div>
                         <div class="title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                            <h2>Contact</h2>
+                            <h2>Contacto</h2>
                         </div>
                     </div>
                 </div>
