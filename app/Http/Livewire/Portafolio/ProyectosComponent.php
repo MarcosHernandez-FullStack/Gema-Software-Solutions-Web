@@ -12,6 +12,7 @@ class ProyectosComponent extends Component
         //inicializamos las variables
         
         $ultimosProyectos  = [];
+        $servicios  =   [];
         try{
             $data = $this->getHome();
 

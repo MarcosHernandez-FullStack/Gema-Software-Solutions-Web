@@ -578,6 +578,7 @@
     transition: all 200ms linear;
     transition-delay: 0.1s;
     z-index: 1;
+    cursor:pointer;
 }
 
 .view-all-service .service-pages li.active a,

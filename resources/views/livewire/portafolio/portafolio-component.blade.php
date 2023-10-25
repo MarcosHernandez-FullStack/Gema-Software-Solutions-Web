@@ -12,7 +12,7 @@
                         <div class="breadcrumb-menu">
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
-                                <li><a href="{{ route('servicios') }}">Servicios</a></li>
+                                <li><a href="#">Servicios</a></li>
                                 <li class="active">{{$servicio['nombre']}}</li>
                             </ul>
                         </div>
@@ -46,9 +46,8 @@
                                         {{-- <button  wire:click="cambioServicioId({{$item['id']}})">  <a href="#" onclick="return false;">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                         </a></button> --}}
-                                        <a href="#" class="active">
-                                            
-                                            <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
+                                        <a wire:click="cambioServicioId({{$item['id']}})" class="active">
+                                            <button >  {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
                                         </a> 
                                         {{--<button class="active" wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} <span class="icon-right-arrow"></span></button>--}}
 
