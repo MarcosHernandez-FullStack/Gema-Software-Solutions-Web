@@ -59,7 +59,7 @@
 
                         <div class="service-details-contact-info text-center">
                             <div class="sidebar-info-box-bg"
-                                style="background-image: url(/assets/images/sidebar/sidebar-info-box-bg.jpg);"></div>
+                                 style="/*background-image: url(/assets/images/sidebar/sidebar-info-box-bg.jpg);*/"></div>
                             <div class="icon">
                                 <span class="icon-phone-call"></span>
                             </div>

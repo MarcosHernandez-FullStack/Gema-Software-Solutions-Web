@@ -192,7 +192,7 @@
                                     <div class="footer-widget-links">
                                         <ul>
                                             <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
-                                            <li><a href="#servicios-seccion">Servicios</a></li>
+                                            <li><a href="/#servicios-seccion">Servicios</a></li>
                                             <li><a href="{{ route('proyectos') }}">Portafolio de proyectos</a></li>
                                             <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>

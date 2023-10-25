@@ -4,7 +4,7 @@
 <div>
     <!--Start breadcrumb area paroller-->
     <section class="breadcrumb-area">
-        <div class="breadcrumb-area-bg" style="background-image: url(assets/images/breadcrumb/breadcrumb-1.jpg);">
+        <div class="breadcrumb-area-bg" style="background-image: url(assets/images/contacto/contacto1.jpeg);">
         </div>
         <div class="shape-box"></div>
         <div class="container">
