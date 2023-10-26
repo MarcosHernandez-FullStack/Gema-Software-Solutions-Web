@@ -69,8 +69,21 @@
                 <div class="col-xl-12">
                     <ul class="styled-pagination text-center clearfix">
                         <li class="arrow prev"><button @if($paginacion['actual']-1 < 0) disabled @endif wire:click="cambioPagina(@if($paginacion['actual']-1 > 0) {{$paginacion['actual']-1}} @else 1 @endif)"><span class="icon-right-arrow left"></span></button></li>
+                        <!--@php
+                            $imprimePuntos = true; 
+                        @endphp
                         @foreach (range(1, $paginacion['total']) as $pagina)
-                        <li class="@if ($pagina===$paginacion['actual']) active @endif"><button wire:click="cambioPagina({{$pagina}})" >{{$pagina}}</button></li>
+                            @if ($pagina>2 && $pagina<$paginacion['total']-2)
+                                @if ($imprimePuntos) <li ><button disabled>...</button></li> @endif
+                                @php
+                                    $imprimePuntos = false; 
+                                @endphp
+                            @else
+                                <li class="@if ($pagina===$paginacion['actual']) active @endif"><button wire:click="cambioPagina({{$pagina}})" >{{$pagina}}</button></li>
+                            @endif
+                        @endforeach-->
+                        @foreach (range(1, $paginacion['total']) as $pagina)
+                            <li class="@if ($pagina===$paginacion['actual']) active @endif"><button wire:click="cambioPagina({{$pagina}})" >{{$pagina}}</button></li>
                         @endforeach
                         <li class="arrow next"><button @if($paginacion['actual']+1 > $paginacion['total']) disabled @endif wire:click="cambioPagina(@if($paginacion['actual']+1 > $paginacion['total']) {{$paginacion['total']}} @else {{$paginacion['actual']+1}} @endif)"><span class="icon-right-arrow"></span></button></li>
                     </ul>
