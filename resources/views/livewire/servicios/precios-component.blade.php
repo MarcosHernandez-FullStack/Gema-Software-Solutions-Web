@@ -11,7 +11,7 @@
             <div class="row mb-5">
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
                     <div class="pricing">
-                        <h3 class="text-center text-black">Básico</h3>
+                        <h3 class="text-center text-black">BASICO</h3>
                         <div class="price text-center mb-4 ">
                             <span><span>$99</span> USD</span>
                         </div>
@@ -33,7 +33,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 pricing-popular aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="pricing">
-                        <h3 class="text-center text-black">E-Commerce</h3>
+                        <h3 class="text-center text-black">ECOMMERCE</h3>
                         <div class="price text-center mb-4 ">
                             <span><span>$199</span> USD</span>
                         </div>
@@ -55,7 +55,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="200">
                     <div class="pricing">
-                        <h3 class="text-center text-black">Personalizado</h3>
+                        <h3 class="text-center text-black">PERSONALIZADO</h3>
                         <div class="price text-center mb-4 ">
                             <span><span>$299</span> USD</span>
                         </div>
