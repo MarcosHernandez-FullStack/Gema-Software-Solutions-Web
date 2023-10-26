@@ -89,7 +89,7 @@
                             <!--Logo-->
                             <div class="logo float-left">
                                 <a href="{{ route('home') }}" class="img-responsive">
-                                    <img src="assets/images/footer/footer-logo-gema.png" alt="" title="">
+                                    <img src="assets/images/resources/logo-gema.png" alt="" title="">
                                 </a>
                             </div>
                             <!--Right Col-->
