@@ -1,7 +1,7 @@
 <div>
     <!--Start breadcrumb area paroller-->
     <section class="breadcrumb-area">
-        <div class="breadcrumb-area-bg" style="background-image: url(/assets/images/breadcrumb/breadcrumb-1.jpg);">
+        <div class="breadcrumb-area-bg" style="background-image: url(/assets/images/headers/HEADER-SERVICIOS.png);">
         </div>
         <div class="shape-box"></div>
         <div class="container">
@@ -12,7 +12,7 @@
                         <div class="breadcrumb-menu">
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
-                                <li><a href="{{ route('servicios') }}">Servicios</a></li>
+                                <li><a href="#">Servicios</a></li>
                                 <li class="active">{{$servicio['nombre']}}</li>
                             </ul>
                         </div>
@@ -46,9 +46,8 @@
                                         {{-- <button  wire:click="cambioServicioId({{$item['id']}})">  <a href="#" onclick="return false;">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                         </a></button> --}}
-                                        <a href="#" class="active">
-                                            
-                                            <button  wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
+                                        <a wire:click="cambioServicioId({{$item['id']}})" class="active">
+                                            <button >  {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
                                         </a> 
                                         {{--<button class="active" wire:click="cambioServicioId({{$item['id']}})">  {{ $item['nombre'] }} <span class="icon-right-arrow"></span></button>--}}
 
@@ -60,7 +59,7 @@
 
                         <div class="service-details-contact-info text-center">
                             <div class="sidebar-info-box-bg"
-                                style="background-image: url(/assets/images/sidebar/sidebar-info-box-bg.jpg);"></div>
+                                 style="/*background-image: url(/assets/images/sidebar/sidebar-info-box-bg.jpg);*/"></div>
                             <div class="icon">
                                 <span class="icon-phone-call"></span>
                             </div>
