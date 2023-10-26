@@ -12,13 +12,14 @@
             <div class="col-xl-12">
                 <div class="contact-form">
                     <form id="contact-form" name="contact_form" class="default-form2"
-                        action="assets/inc/sendmail.php" method="post">
+                        wire:submit.prevent ="cargarData">
 
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <div class="input-box">
-                                        <input type="text" name="form_name" id="formName"
+
+                                        <input wire:model.defer="nombre" type="text" name="form_name" id="formName"
                                             placeholder="Nombre Completo" required="">
                                     </div>
                                 </div>
@@ -26,7 +27,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <div class="input-box">
-                                        <input type="email" name="form_email" id="formEmail"
+                                        <input wire:model.defer="email" type="email" name="form_email" id="formEmail"
                                             placeholder="Correo Electrónico" required="">
                                     </div>
                                 </div>
@@ -37,16 +38,16 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <div class="input-box">
-                                        <input type="text" name="form_phone" value="" id="formPhone"
-                                            placeholder="Teléfono">
+                                        <input wire:model.defer="telefono" type="text" name="form_phone"
+                                            value="" id="formPhone" placeholder="Teléfono">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <div class="input-box">
-                                        <input type="text" name="form_subject" value="" id="formSubject"
-                                            placeholder="Asunto">
+                                        <input wire:model.defer="asunto" type="text" name="form_subject"
+                                            value="" id="formSubject" placeholder="Asunto">
                                     </div>
                                 </div>
                             </div>
@@ -56,8 +57,8 @@
                             <div class="col-xl-12">
                                 <div class="form-group">
                                     <div class="input-box">
-                                        <textarea name="form_message" id="formMessage"
-                                            placeholder="Escribe un mensaje" required=""></textarea>
+                                        <textarea wire:model.defer="mensaje" name="form_message" id="formMessage" placeholder="Escribe un mensaje"
+                                            required=""></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -66,9 +67,8 @@
                         <div class="row">
                             <div class="col-xl-12 text-center">
                                 <div class="button-box">
-                                    <input id="form_botcheck" name="form_botcheck" class="form-control"
-                                        type="hidden" value="">
-                                    <button class="btn-one" type="submit" data-loading-text="Please wait...">
+
+                                    <button class="btn-one" type="submit">
                                         <span class="txt">
                                             Enviar mensaje
                                         </span>
