@@ -6,7 +6,7 @@
                 <div class="header">
                     <div class="auto-container">
                         <div class="outer-box">
-    
+
                             <!--Start Header Left-->
                             <div class="header-left">
                                 <div class="main-logo-box">
@@ -14,8 +14,8 @@
                                         <img src="/assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
                                     </a>
                                 </div>
-    
-    
+
+
                                 <div class="nav-outer style1 clearfix">
                                     <!--Mobile Navigation Toggler-->
                                     <div class="mobile-nav-toggler">
@@ -32,7 +32,7 @@
                                                 <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
                                                 </li>
                                                 <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
-                                                  
+
                                                 </li>
                                                 <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif dropdown"><a href="@if(Route::currentRouteName() === 'home') #servicios-seccion @else {{ route('portafolio',$servicios[0]['id']) }} @endif"><span>SERVICIOS</span></a>
                                                     <ul>
@@ -41,24 +41,24 @@
                                                         @endforeach
                                                     </ul>
                                                 </li>
-                                                
-                                                    
-                                                
+
+
+
                                                 <li class=" @if(Route::currentRouteName() === 'proyectos') current @endif"><a href="{{ route('proyectos') }}"><span>PORTAFOLIO</span></a>
-                                                    
+
                                                 </li>
                                                 <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
                                             </ul>
                                         </div>
                                     </nav>
-                                    
+
                                     <!-- Main Menu End-->
                                 </div>
-    
-    
+
+
                             </div>
                             <!--End Header Left-->
-    
+
                             <!--Start Header Right-->
                             <div class="header-right">
                                 <div class="phone-number-box1">
@@ -76,12 +76,12 @@
                                 </div-->
                             </div>
                             <!--End Header Right-->
-    
+
                         </div>
                     </div>
                 </div>
                 <!--End header-->
-    
+
                 <!--Sticky Header-->
                 <div class="sticky-header">
                     <div class="container">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <!--End Sticky Header-->
-    
+
                 <!-- Mobile Menu  -->
                 <div class="mobile-menu">
                     <div class="menu-backdrop"></div>
