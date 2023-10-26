@@ -323,33 +323,5 @@
     @endforeach
 </div>
 
-{{-- @section('nav')
-<nav class="main-menu style1 navbar-expand-md navbar-light">
-    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-        <ul class="navigation clearfix">
-            <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
-            </li>
-            <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
-              
-            </li>
-            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif dropdown"><a href="#"><span>SERVICIOS</span></a>
-                <ul>
-                    @foreach ($listaServicios as $item)
-                    <li ><a href="{{ route('portafolio',$item['id']) }}" class="active">{{ $item['nombre'] }}</a></li>
-                  
-                    @endforeach
-                </ul>
-            </li>
-            
-                
-            
-            <li class=" @if(Route::currentRouteName() === 'proyectos') current @endif"><a href="{{ route('proyectos') }}"><span>PORTAFOLIO</span></a>
-                
-            </li>
-            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
-        </ul>
-    </div>
-</nav>
-@endsection --}}
 
 
