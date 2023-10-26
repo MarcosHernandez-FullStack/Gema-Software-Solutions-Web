@@ -954,6 +954,66 @@ li {
 }
 
 
+.styled-pagination li.prev button {
+    transform: rotate(-180deg);
+}
+
+.styled-pagination li button span:before {
+    position: relative;
+    top: 5px;
+    font-size: 25px;
+}
+
+.styled-pagination li.prev button span.left {
+    position: relative;
+    top: 0px;
+}
+
+.styled-pagination li.next button span.right {
+    position: relative;
+    top: 0px;
+}
+
+.styled-pagination li button {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 0%;
+    background: var(--thm-primary);
+    border: 1px solid var(--thm-primary);
+    color: var(--thm-black);
+    font-size: 18px;
+    line-height: 53px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+    font-family: var(--thm-font);
+    z-index: 1;
+}
+
+.styled-pagination li:hover button,
+.styled-pagination li.active button {
+    color: #ffffff;
+    border-color: var(--thm-base);
+    background: var(--thm-base);
+}
+
+.styled-pagination li.prev button,
+.styled-pagination li.next button {
+    color: var(--thm-base);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.styled-pagination li.prev button:hover,
+.styled-pagination li.next button:hover {
+    color: #ffffff;
+}
+
+
+
 
 
 
