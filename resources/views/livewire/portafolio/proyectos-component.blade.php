@@ -29,7 +29,7 @@
     <section class="blog-page-one">
         <div class="container">
             <div class="row">
-                @foreach ($ultimosProyectos as $proyecto)
+                @foreach ($proyectos as $proyecto)
                 <!--Start Single Blog Style1-->
                 <div class="col-xl-4 col-lg-6">
                     <div class="single-blog-style1">
@@ -68,9 +68,11 @@
             <div class="row">
                 <div class="col-xl-12">
                     <ul class="styled-pagination text-center clearfix">
-                        <li class="arrow prev"><a href="#"><span class="icon-right-arrow left"></span></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li class="arrow next"><a href="#"><span class="icon-right-arrow"></span></a></li>
+                        <li class="arrow prev"><button @if($paginacion['actual']-1 < 0) disabled @endif wire:click="cambioPagina(@if($paginacion['actual']-1 > 0) {{$paginacion['actual']-1}} @else 1 @endif)"><span class="icon-right-arrow left"></span></button></li>
+                        @foreach (range(1, $paginacion['total']) as $pagina)
+                        <li class="@if ($pagina===$paginacion['actual']) active @endif"><button wire:click="cambioPagina({{$pagina}})" >{{$pagina}}</button></li>
+                        @endforeach
+                        <li class="arrow next"><button @if($paginacion['actual']+1 > $paginacion['total']) disabled @endif wire:click="cambioPagina(@if($paginacion['actual']+1 > $paginacion['total']) {{$paginacion['total']}} @else {{$paginacion['actual']+1}} @endif)"><span class="icon-right-arrow"></span></button></li>
                     </ul>
                 </div>
             </div>
@@ -81,7 +83,7 @@
 
    
 </div>
-@foreach ($ultimosProyectos as $proyecto)
+@foreach ($proyectos as $proyecto)
 <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
     aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -128,30 +130,3 @@
     </div>
 </div>
 @endforeach
-{{-- @section('nav')
-<nav class="main-menu style1 navbar-expand-md navbar-light">
-    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-        <ul class="navigation clearfix">
-            <li class=" @if(Route::currentRouteName() === 'home') current @endif"><a href="{{ route('home') }}"><span>INICIO</span></a>
-            </li>
-            <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
-              
-            </li>
-            <li class=" @if(Route::currentRouteName() === 'servicios') current @endif dropdown"><a href="#"><span>SERVICIOS</span></a>
-                <ul>
-                    @foreach ($servicios as $servicio)
-                    <li><a href="{{ route('portafolio',$servicio['id']) }}">{{$servicio['nombre']}}</a></li>
-                    @endforeach
-                </ul>
-            </li>
-            
-                
-            
-            <li class=" @if(Route::currentRouteName() === 'proyectos') current @endif"><a href="{{ route('proyectos') }}"><span>PORTAFOLIO</span></a>
-                
-            </li>
-            <li class="@if(Route::currentRouteName() === 'contacto') current @endif"><a href="{{ route('contacto') }}"><span>CONTACTO</span></a></li>
-        </ul>
-    </div>
-</nav>
-@endsection --}}
