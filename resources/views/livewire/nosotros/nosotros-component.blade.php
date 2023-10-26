@@ -2,7 +2,7 @@
    {{--  @livewire("layouts.header-component") --}}
             <!--Start breadcrumb area paroller-->
             <section class="breadcrumb-area">
-                <div class="breadcrumb-area-bg" style="background-image: url(assets/images/about/nosotros.jpg);background-size: 100% 100%;">
+                <div class="breadcrumb-area-bg" style="background-image: url(assets/images/headers/HEADER-NOSOTROS.png);">
                 </div>
                 <div class="shape-box"></div>
                 <div class="container">
