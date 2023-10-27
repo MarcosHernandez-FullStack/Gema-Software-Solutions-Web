@@ -27,8 +27,8 @@
         </div>
     </section>
     <!--End breadcrumb area-->
-    @livewire('contacto')
+    @livewire('contacto.contacto-component')
     
-    @livewire('sociales')
+    @livewire('contacto.sociales-component')
 </div>
 @endsection

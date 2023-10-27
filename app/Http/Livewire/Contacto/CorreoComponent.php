@@ -2,7 +2,12 @@
 
 namespace App\Http\Livewire\Contacto;
 
+use App\Mail\MiCorreo;
+use Illuminate\Contracts\Mail\Mailable;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Http;
 use Livewire\Component;
+
 
 class CorreoComponent extends Component
 {
@@ -20,7 +25,8 @@ class CorreoComponent extends Component
         $contact['telefono'] = '+51 999 999 999';
         $contact['asunto'] = 'Nuevo cliente';
         $contact['mensaje'] = 'Nuevo cliente';
-
         Mail::to('guevaredo03@gmail.com')->send(new MiCorreo($contact));
+        $this->email = '';
+        
     }
 }

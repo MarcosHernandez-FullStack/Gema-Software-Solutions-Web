@@ -424,9 +424,9 @@
             </div>
         </div>
     </section-->
-    @livewire('precios')
-    @livewire('sociales')
-    @livewire('contacto')
+    @livewire('servicios.precios-component')
+    @livewire('contacto.sociales-component')
+    {{--@livewire('contacto.contacto-component')--}}
 
     @foreach ($ultimosProyectos as $proyecto)
         <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"

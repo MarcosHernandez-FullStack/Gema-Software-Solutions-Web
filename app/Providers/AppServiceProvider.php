@@ -27,8 +27,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Livewire::component('precios', PreciosComponent::class);
-        Livewire::component('contacto', ContactoComponent::class);
-        Livewire::component('sociales', SocialesComponent::class);
+        
     }
 }
