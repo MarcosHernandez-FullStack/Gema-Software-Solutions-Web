@@ -35,11 +35,11 @@
 
                                                 </li>
                                                 <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif dropdown"><a href="@if(Route::currentRouteName() === 'home') #servicios-seccion @else {{ route('portafolio',$servicios[0]['id']) }} @endif"><span>SERVICIOS</span></a>
-                                                    <ul>
+                                                    {{--<ul>
                                                         @foreach ($servicios as $servicio)
                                                         <li><a href="{{ route('portafolio',$servicio['id']) }}">{{$servicio['nombre']}}</a></li>
                                                         @endforeach
-                                                    </ul>
+                                                    </ul>--}}
                                                 </li>
 
 

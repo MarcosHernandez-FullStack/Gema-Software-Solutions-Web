@@ -104,7 +104,7 @@
 
 
         <!-- page-direction -->
-        <div class="page_direction">
+        {{--<div class="page_direction">
             <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
             <div class="demo-ltr direction_switch"><button class="ltr">LTR</button></div>
         </div>
@@ -140,7 +140,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>--}}
         <!-- end switcher menu -->
         @livewire("layouts.header-component")
         @yield('content')
@@ -161,7 +161,7 @@
                                             <p>Trujillo, Perú</p>
                                         </div>
                                         <h2><a href="tel:123456789">+51 968 372 292</a></h2>
-                                        <h3><a href="mailto:yourmail@email.com">consultas@gemaswsolutions.com</a></h3>
+                                        <h3><a href="mailto:yourmail@email.com">contacto@gemaswsolutions.com</a></h3>
                                         <div class="footer-social-link">
                                             <ul class="clearfix">
                                                 <li>
