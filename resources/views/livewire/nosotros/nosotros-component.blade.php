@@ -106,7 +106,7 @@
                             <h2>Transforma tus ideas<br> ¡Mira lo que tenemos para ti!</h2>
                         </div>
                         <div class="button-box">
-                            <a class="btn-one" href="{{ route('proyectos') }}"><span class="txt">Descubre
+                            <a class="btn-one" href="{{ route('portafolio',$servicios[0]['id']) }}"><span class="txt">Descubre
                                     Más</span></a>
                         </div>
                     </div>

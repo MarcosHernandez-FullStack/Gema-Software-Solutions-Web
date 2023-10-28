@@ -1,5 +1,7 @@
 <section class="service-style2-area">
-    <div class="service-style2--primary-bg"></div>
+    @if (Route::currentRouteName() !== 'home')
+        <div class="service-style2--primary-bg"></div>
+    @endif
     <div class="container">
         <div class="sec-title text-center">
             <div class="sub-title">

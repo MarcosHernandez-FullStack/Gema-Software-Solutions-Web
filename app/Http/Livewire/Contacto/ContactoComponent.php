@@ -12,13 +12,6 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactoComponent extends Component
 {
-    
-    public function render()
-    {
-        return view('livewire.contacto.contacto-component');
-    }
-
-
     /* Lógica Formulario Contacto */
 
     public $nombre;
@@ -27,7 +20,42 @@ class ContactoComponent extends Component
     public $asunto;
     public $mensaje;
 
+    protected $rules=[
+        'nombre' => 'required',
+        'email' => 'required|email',
+        'telefono' => 'required',
+        'asunto' => 'required',
+        'mensaje' => 'required|max:500',
+    ];
+
+   protected $messages = [
+        'nombre.required' => 'La nombre es obligatorio',
+        'email.required' => 'El correo es obligatorio.',
+        'email.email' => 'Los datos deben tener un formato de correo.',
+        'telefono.required' => 'El teléfono es obligatorio.',
+        'asunto.required' => 'El asunto es obligatorio.',
+        'mensaje.required' => 'El mensaje es obligatorio.',
+        'mensaje.max' => 'El mensaje debe tener 500 caracteres como máximo.',
+    ];
+
+    public function updated($propertyName){
+        $this->validateOnly($propertyName);
+    }
+
+    
+
+    public function resetError(){
+        $this->resetErrorBag();
+        $this->resetValidation();
+    }
+    
+    public function render()
+    {
+        return view('livewire.contacto.contacto-component');
+    }
+
     public function cargarData(){
+        $this->validate();
 
         $contact['nombre'] = $this->nombre;
         $contact['email'] = $this->email;
@@ -36,5 +64,11 @@ class ContactoComponent extends Component
         $contact['mensaje'] = $this->mensaje;
 
         Mail::to('guevaredo03@gmail.com')->send(new MiCorreo($contact));
+
+        $this->nombre='';
+        $this->email='';
+        $this->telefono='';
+        $this->asunto='';
+        $this->mensaje='';    
     }
 }
