@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/rtl.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/scrollbar.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/light-bx.min.css')}}">
 
     <!-- Module css -->
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/header-section.css')}}">
@@ -160,7 +161,7 @@
                                         <div class="text-box">
                                             <p>Trujillo, Perú</p>
                                         </div>
-                                        <h2><a href="tel:123456789">+51 968 372 292</a></h2>
+                                        <h2><a href="https://wa.me/+51968372292" target="_blank">+51 968 372 292</a></h2>
                                         <h3><a href="mailto:yourmail@email.com">contacto@gemaswsolutions.com</a></h3>
                                         <div class="footer-social-link">
                                             <ul class="clearfix">
@@ -296,6 +297,7 @@
     <script src="{{ asset('assets/js/TweenMax.min.js')}}"></script>
     <script src="{{ asset('assets/js/validation.js')}}"></script>
     <script src="{{ asset('assets/js/wow.js')}}"></script>
+    <script src="{{ asset('assets/js/light-bx.min.js')}}"></script>
 
     <script src="{{ asset('assets/js/jquery-1color-switcher.min.js')}}"></script>
     <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
@@ -307,6 +309,7 @@
     <!-- thm custom script -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>
     @livewireScripts
+    @stack('scripts')
 
 
 </body>

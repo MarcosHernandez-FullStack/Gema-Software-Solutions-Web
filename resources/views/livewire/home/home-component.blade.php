@@ -431,7 +431,7 @@
     @foreach ($ultimosProyectos as $proyecto)
         <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
             aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
@@ -444,26 +444,28 @@
                        {{--  @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
                         {{$detalle['ruta_foto']}}
                         @endforeach --}}
-                        <div id="carouselExample{{ $proyecto['id'] }}" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExample{{ $proyecto['id'] }}" class="carousel carousel-dark slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                         <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
                                             alt="Detalle {{ $index + 1 }}">
+                                        <div class="carousel-caption d-none d-md-block "
+                                            style="width: 100%;left:0%;right:0%;color: var(--thm-primary);font-size: 2rem; background-color: rgba(32, 186, 209, 0.7);">
+                                            <p class="">{{ $detalle['nombre'] }}</p>
+                                        </div>
                                     </div>
                                 @endforeach
                             </div>
                             <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}"
                                 role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="sr-only" style="color:black">Previous</span>
-                                {{--  <p style="color:black"><</p> --}}
+                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}"
                                 role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                  <span class="sr-only">Next</span>
-                                 >
 
                             </a>
                         </div>
