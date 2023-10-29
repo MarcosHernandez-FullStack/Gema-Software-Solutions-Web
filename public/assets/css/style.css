@@ -4443,3 +4443,10 @@ select:focus {
         color: #000;
     }
 }
+
+.titulo-proyecto-home {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}

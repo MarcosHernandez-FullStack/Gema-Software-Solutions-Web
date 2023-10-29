@@ -95,9 +95,9 @@
         </div>
     </section>
     <!--End About Style2 Area-->
-
+    @livewire('contacto.sociales-component')
     <!--Start Slogan Style2 Area-->
-    <section class="slogan-style2-area">
+    <!--section class="slogan-style2-area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
     <!--End Slogan Style2 Area-->
 
 
