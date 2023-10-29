@@ -31,7 +31,7 @@ class NosotrosComponent extends Component
     public function getServicioAll()
     {
         try {
-            $response = Http::get('http://127.0.0.1:8000/api/getServicioAll');
+            $response = Http::get(env('API_URL').'getServicioAll');
 
             if ($response->successful()) {
                 $data = $response->json();

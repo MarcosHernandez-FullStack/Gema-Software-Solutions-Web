@@ -34,7 +34,7 @@
                                                 <li class=" @if(Route::currentRouteName() === 'nosotros') current @endif"><a href="{{ route('nosotros') }}"><span>NOSOTROS</span></a>
 
                                                 </li>
-                                                <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif dropdown"><a href="@if(Route::currentRouteName() === 'home') #servicios-seccion @else {{ route('portafolio',$servicios[0]['id']) }} @endif"><span>SERVICIOS</span></a>
+                                                <li class=" @if(Route::currentRouteName() === 'portafolio') current @endif dropdown"><a href="@if (!empty($servicios)) {{ route('portafolio',$servicios[0]['id']) }} @else # @endif "><span>SERVICIOS</span></a>
                                                     {{--<ul>
                                                         @foreach ($servicios as $servicio)
                                                         <li><a href="{{ route('portafolio',$servicio['id']) }}">{{$servicio['nombre']}}</a></li>

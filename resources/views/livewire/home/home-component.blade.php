@@ -224,7 +224,7 @@
                                                 <span class="icon-creative"></span>
                                             </div>
                                         </div>
-                                        <div class="title-holder">
+                                        <div class="title-holder d-flex flex-column justify-content-between" style="height: 350px">
                                             <h3><a href="{{ route('portafolio', ['servicio_id' => $servicio['id']]) }}">{{$servicio['nombre']}}</a></h3>
                                             <div class="text">
                                                 <p>
@@ -232,7 +232,7 @@
                                                 </p>
                                             </div>
                                             <!--['servicio_id' => $servicio['id']-->
-                                            <div class="btn-box">
+                                            <div class="btn-box mt-auto">
                                                 <a href="{{ route('portafolio',$servicio['id']) }}"><span class="icon-right-arrow"></span></a>
                                             </div>
                                         </div>
@@ -364,7 +364,7 @@
                                                     <p>{{ $proyecto['fecha_implementacion'] }}</p>
                                                 </div>
                                             </div>
-                                            <div class="text-holder">
+                                            <div class="text-holder d-flex flex-column justify-content-between" style="height: 240px">
                                                 <div class="meta-info">
                                                     <ul>
                                                         <li><span class="icon-check"></span>
@@ -377,10 +377,10 @@
                                                 </div>
                                                 <h3>
                                                     <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
-                                                        {{ $proyecto['nombre'] }}
+                                                        <p class="titulo-proyecto-home">{{ $proyecto['nombre'] }}</p>
                                                     </a>
                                                 </h3>
-                                                <div class="btn-box">
+                                                <div class="btn-box mt-auto">
                                                     <a href="#" onclick="return false;" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
                                                 </div>
                                             </div>

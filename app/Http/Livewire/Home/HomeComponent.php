@@ -44,7 +44,7 @@ class HomeComponent extends Component
     public function getHome()
     {
         try {
-            $response = Http::get('http://127.0.0.1:8000/api/getHome/');
+            $response = Http::get(env('API_URL').'getHome/');
 
             if ($response->successful()) {
                 $data = $response->json();

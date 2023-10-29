@@ -42,7 +42,7 @@ class PortafolioComponent extends Component
 
     public function getServicioPorId($id)
     {
-        $response = Http::get('http://127.0.0.1:8000/api/getServicioPorId/' . $id);
+        $response = Http::get(env('API_URL').'getServicioPorId/' . $id);
 
         if ($response->successful()) {
             $data = $response->json();

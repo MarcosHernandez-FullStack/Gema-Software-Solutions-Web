@@ -36,7 +36,7 @@ class ProyectosComponent extends Component
     public function getProyectos($pagina)
     {
         try {
-            $response = Http::get('http://127.0.0.1:8000/api/getProyectos', [
+            $response = Http::get(env('API_URL').'getProyectos', [
                 'pagina' => $pagina,
             ]);
 

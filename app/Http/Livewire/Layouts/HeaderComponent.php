@@ -10,7 +10,7 @@ class HeaderComponent extends Component
     public function getHome()
     {
         try {
-            $response = Http::get('http://127.0.0.1:8000/api/getHome/');
+            $response = Http::get(env('API_URL').'getHome/');
 
             if ($response->successful()) {
                 $data = $response->json();
@@ -27,12 +27,16 @@ class HeaderComponent extends Component
 
     public function render()
     {
-         //inicializamos las variables
-         $servicios = [];
-         $data = $this->getHome();
+        $servicios = [];
+        try{
+            $data = $this->getHome();
  
          $servicios = $data['servicios'];
  
         return view('livewire.layouts.header-component', compact('servicios'));
+        }catch(\Exception $e){
+            //retornamos solamente la vista en caso de errores al obtener los datos
+            return view('livewire.layouts.header-component', compact('servicios'));
+        }
     }
 }
