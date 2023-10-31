@@ -96,7 +96,7 @@
                             <div class="icon">
                                 <span class="icon-phone-call"></span>
                             </div>
-                            <h3>Contactanos</h3>
+                            <h3>Contáctanos</h3>
                             <h2><a href="https://wa.me/+51968372292" target="_blank">+51 968 372 292</a></h2>
                         </div>
 
@@ -239,14 +239,14 @@
                 @foreach ($ultimosProyectos as $proyecto)
                 <!--Start Single Blog Style1-->
                 <div class="col-xl-4 col-lg-12">
-                    <div class="single-blog-style1">
+                    <div class="single-blog-style1" style="margin-bottom: 0%;padding-bottom: 40px;height: 100%!important;">
                         <div class="img-holder">
                             <img src="<?php echo $proyecto['ruta_foto']; ?>" alt="">
                             <div class="date-box">
                                 <p>{{ $proyecto['fecha_implementacion'] }}</p>
                             </div>
                         </div>
-                        <div class="text-holder">
+                        <div class="text-holder d-flex flex-column justify-content-between" style="height: 50%;">
                             <div class="meta-info">
                                 <ul>
                                     <li><span class="icon-check"></span>
@@ -259,10 +259,10 @@
                             <h3>
                                 <a href="#" onclick="return false;" data-toggle="modal"
                                     data-target="#modal{{ $proyecto['id'] }}">
-                                    {{ $proyecto['nombre'] }}
+                                    <p class="titulo-proyecto-home">{{ $proyecto['nombre'] }}</p>
                                 </a>
                             </h3>
-                            <div class="btn-box">
+                            <div class="btn-box mt-auto">
                                 <!--blog-single.html-->
                                 <a href="#" onclick="return false;" data-toggle="modal"
                                     data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
@@ -283,7 +283,7 @@
     @foreach ($ultimosProyectos as $proyecto)
     <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
         aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
@@ -296,28 +296,28 @@
                     {{-- @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
                     {{$detalle['ruta_foto']}}
                     @endforeach --}}
-                    <div id="carouselExample{{ $proyecto['id'] }}" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExample{{ $proyecto['id'] }}" class="carousel carousel-dark slide" data-ride="carousel">
                         <div class="carousel-inner">
                             @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
-                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }} ">
                                 <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
                                     alt="Detalle {{ $index + 1 }}">
+                                <div class="carousel-caption d-none d-md-block "
+                                    style="width: 100%;left:0%;right:0%;color: var(--thm-primary);font-size: 2rem; background-color: rgba(32, 186, 209, 0.7);">
+                                    <p class="">{{ $detalle['nombre'] }}</p>
+                                </div>
                             </div>
                             @endforeach
                         </div>
                         <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only" style="color:black">Previous</span>
-                            {{-- <p style="color:black">
-                                << /p> --}}
+                            <span class="sr-only">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-
-
                         </a>
                     </div>
                 </div>

@@ -221,7 +221,7 @@
                         <div class="bottom-inner">
                             <div class="footer-logo-style1">
                                 <a href="{{ route('home') }}">
-                                    <img src="assets/images/footer/footer-logo-gema.png" alt="Awesome Logo" title="">
+                                    <img src="{{ asset('assets/images/footer/footer-logo-gema.png')}}" alt="Awesome Logo" title="">
                                 </a>
                             </div>
                             <div class="copyright">
