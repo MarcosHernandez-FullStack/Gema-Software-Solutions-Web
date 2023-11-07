@@ -6,9 +6,9 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 
 class NosotrosComponent extends Component
-{   
+{
     public function render()
-    {  
+    {
         //inicializamos las variables
         $servicios = [];
         try{
@@ -17,15 +17,15 @@ class NosotrosComponent extends Component
             $servicios = $data['servicios'];
 
             return view('livewire.nosotros.nosotros-component',compact('servicios'))
-            ->extends('layouts.principal')
+            ->extends('layouts.principal',compact('servicios'))
             ->section('content');
         }catch(\Exception $e){
             //retornamos solamente la vista en caso de errores al obtener los datos
             return view('livewire.nosotros.nosotros-component',compact('servicios'))
-            ->extends('layouts.principal')
+            ->extends('layouts.principal',compact('servicios'))
             ->section('content');
         }
-        
+
     }
 
     public function getServicioAll()

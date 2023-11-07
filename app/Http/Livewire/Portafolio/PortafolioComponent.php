@@ -17,7 +17,8 @@ class PortafolioComponent extends Component
     }
 
     public function render()
-    {   
+    {
+        $servicios = [];
         $servicio = [];
         $listaServicios  = [];
         $ultimosProyectos  = [];
@@ -27,17 +28,18 @@ class PortafolioComponent extends Component
 
         $servicio = $data['servicio'];
         $listaServicios  = $data['listaServicios'];
+        $servicios = $data['listaServicios'];
         $ultimosProyectos  = $data['ultimosProyectos'];
 
 
         return view('livewire.portafolio.portafolio-component', compact('servicio','listaServicios', 'ultimosProyectos'))
-            ->extends('layouts.principal')
+            ->extends('layouts.principal', compact('servicios'))
             ->section('content');
         }catch(\Exception $e){
             return view('livewire.portafolio.portafolio-component', compact('servicio','listaServicios', 'ultimosProyectos'))
-            ->extends('layouts.principal')
+            ->extends('layouts.principal', compact('servicios'))
             ->section('content');
-        } 
+        }
     }
 
     public function getServicioPorId($id)

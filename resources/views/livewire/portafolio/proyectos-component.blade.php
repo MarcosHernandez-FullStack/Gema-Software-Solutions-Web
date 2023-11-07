@@ -32,8 +32,8 @@
                 @foreach ($proyectos as $proyecto)
                 <!--Start Single Blog Style1-->
                 <div class="col-xl-4 col-lg-6">
-                    <div class="single-blog-style1"
-                        style="margin-bottom: 0%;padding-bottom: 40px;height: 100%!important;">
+                    <div class="single-blog-style1 mb-5"
+                        style="padding-bottom: 40px;height: 100%!important;">
                         <div class="img-holder">
                             <img src="{{$proyecto['ruta_foto']}}" alt="">
                             <div class="date-box">
@@ -68,6 +68,7 @@
                 <!--End Single Blog Style1-->
                 @endforeach
             </div>
+            @if (!empty($paginacion))
             <div class="row">
                 <div class="col-xl-12">
                     <ul class="styled-pagination text-center clearfix">
@@ -75,13 +76,13 @@
                                 wire:click="cambioPagina(@if($paginacion['actual']-1 > 0) {{$paginacion['actual']-1}} @else 1 @endif)"><span
                                     class="icon-right-arrow left"></span></button></li>
                         <!--@php
-                            $imprimePuntos = true; 
+                            $imprimePuntos = true;
                         @endphp
                         @foreach (range(1, $paginacion['total']) as $pagina)
                             @if ($pagina>2 && $pagina<$paginacion['total']-2)
                                 @if ($imprimePuntos) <li ><button disabled>...</button></li> @endif
                                 @php
-                                    $imprimePuntos = false; 
+                                    $imprimePuntos = false;
                                 @endphp
                             @else
                                 <li class="@if ($pagina===$paginacion['actual']) active @endif"><button wire:click="cambioPagina({{$pagina}})" >{{$pagina}}</button></li>
@@ -98,6 +99,7 @@
                     </ul>
                 </div>
             </div>
+            @endif
 
         </div>
     </section>
@@ -134,14 +136,14 @@
                             </div>
                             @endforeach
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                        <a class="carousel-control-prev"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span ><i class="fa-solid fa-arrow-left fa-beat fa-2xl" style="color: #20BAD1;"></i></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                        <a class="carousel-control-next"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span ><i class="fa-solid fa-arrow-right fa-beat fa-2xl" style="color: #20BAD1;"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>

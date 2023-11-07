@@ -1,5 +1,5 @@
 <div>
-    
+
     <!-- Start Main Slider -->
     <section class="main-slider style1">
         <div class="slider-box">
@@ -142,7 +142,7 @@
                             </div>
 
                             <div class="btn-box">
-                                <a class="btn-one" href="about.html">
+                                <a class="btn-one" href="@if (!empty($servicios)) {{ route('portafolio',$servicios[0]['id']) }} @else # @endif">
                                     <span class="txt">Descubre más</span>
                                 </a>
                             </div>
@@ -156,7 +156,7 @@
                         <div class="shape-1"></div>
                         <div class="shape-2"></div>
                         <div class="border-box float-bob-y"></div>
-                        
+
                         <div class="inner">
                             <img src="assets/images/about/transformacion_digital2.jpg" alt="">
                             @if (count($ultimosProyectos) > 50) {{--definir la cantidad de proyectos para mostrar div--}}
@@ -168,7 +168,7 @@
                             </div>
                             @endif
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -193,22 +193,24 @@
                 <div class="col-xl-12">
                     <div class="theme_carousel news-element-carousel owl-theme owl-carousel owl-nav-style-one rtl-carousel"
                             data-options='{
-                                    "loop": true, 
-                                    "margin": 30, 
-                                    "autoheight":true, 
-                                    "lazyload":true, 
-                                    "nav": true, 
-                                    "dots": false, 
-                                    "autoplay": true, 
-                                    "autoplayTimeout": 5000, 
-                                    "smartSpeed": 500, 
+                                    "loop": true,
+                                    "margin": 30,
+                                    "autoheight":true,
+                                    "lazyload":true,
+                                    @if (count($servicios)>3)
+                                    "nav": true,
+                                    "dots": false,
+                                    "autoplay": true,
+                                    "autoplayTimeout": 5000,
+                                    "smartSpeed": 500,
+                                    @endif
                                     "navText": ["<span class=\"left icon-right-arrow\"></span>",
-                                    "<span class=\"right icon-right-arrow\"></span>"], 
-                                    "responsive":{ 
-                                    "0" :{ "items": "1" }, 
-                                    "600" :{ "items" : "1" }, 
-                                    "768" :{ "items" : "2" }, 
-                                    "992":{ "items" : "2" }, 
+                                    "<span class=\"right icon-right-arrow\"></span>"],
+                                    "responsive":{
+                                    "0" :{ "items": "1" },
+                                    "600" :{ "items" : "1" },
+                                    "768" :{ "items" : "2" },
+                                    "992":{ "items" : "2" },
                                     "1200":{ "items" : "3" }
                                 }
                             }'>
@@ -242,8 +244,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
     <!--End Service Style2 Area-->
@@ -334,22 +336,22 @@
             <div class="row">
                 <div class="theme_carousel news-element-carousel owl-theme owl-carousel owl-nav-style-one rtl-carousel"
                             data-options='{
-                                    "loop": true, 
-                                    "margin": 30, 
-                                    "autoheight":true, 
-                                    "lazyload":true, 
-                                    "nav": true, 
-                                    "dots": false, 
-                                    "autoplay": true, 
-                                    "autoplayTimeout": 5000, 
-                                    "smartSpeed": 500, 
+                                    "loop": true,
+                                    "margin": 30,
+                                    "autoheight":true,
+                                    "lazyload":true,
+                                    "nav": true,
+                                    "dots": false,
+                                    "autoplay": true,
+                                    "autoplayTimeout": 5000,
+                                    "smartSpeed": 500,
                                     "navText": ["<span class=\"left icon-right-arrow\"></span>",
-                                    "<span class=\"right icon-right-arrow\"></span>"], 
-                                    "responsive":{ 
-                                    "0" :{ "items": "1" }, 
-                                    "600" :{ "items" : "1" }, 
-                                    "768" :{ "items" : "2" }, 
-                                    "992":{ "items" : "2" }, 
+                                    "<span class=\"right icon-right-arrow\"></span>"],
+                                    "responsive":{
+                                    "0" :{ "items": "1" },
+                                    "600" :{ "items" : "1" },
+                                    "768" :{ "items" : "2" },
+                                    "992":{ "items" : "2" },
                                     "1200":{ "items" : "3" }
                                 }
                             }'>
@@ -357,14 +359,15 @@
                                 @foreach ($ultimosProyectos as $proyecto)
                                     <!--Start Single Blog Style1-->
                                     <!--<div class="col-xl-4 col-lg-12">-->
-                                        <div class="single-blog-style1" data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1000">
+                                        <div class="single-blog-style1"
+                                        data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1000">
                                             <div class="img-holder">
                                                 <img src="{{$proyecto['ruta_foto']}}" alt="">
                                                 <div class="date-box">
                                                     <p>{{ $proyecto['fecha_implementacion'] }}</p>
                                                 </div>
                                             </div>
-                                            <div class="text-holder d-flex flex-column justify-content-between" style="height: 240px">
+                                            <div class="text-holder d-flex flex-column justify-content-between" style="height: 270px;">
                                                 <div class="meta-info">
                                                     <ul>
                                                         <li><span class="icon-check"></span>
@@ -457,17 +460,16 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}"
-                                role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}"
-                                role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Next</span>
-
-                            </a>
+                            <a class="carousel-control-prev"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                            data-slide="prev">
+                            <span ><i class="fa-solid fa-arrow-left fa-beat fa-2xl" style="color: #1266e3;"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                            data-slide="next">
+                            <span ><i class="fa-solid fa-arrow-right fa-beat fa-2xl" style="color: #1266e3;"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                         </div>
                     </div>
                     {{--    <div class="modal-footer">

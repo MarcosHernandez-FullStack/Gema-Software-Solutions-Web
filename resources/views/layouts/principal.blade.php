@@ -16,46 +16,45 @@
 
 
 
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/aos.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/custom-animate.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fancybox.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/imp.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/jquery.bootstrap-touchspin.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/rtl.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/scrollbar.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/light-bx.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom-animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/imp.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery.bootstrap-touchspin.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css') }}">
 
     <!-- Module css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/header-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/banner-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/about-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/blog-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/fact-counter-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/faq-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/contact-page.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/breadcrumb-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/team-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/partner-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/testimonial-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/services-section.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/module-css/footer-section.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/header-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/banner-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/about-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/blog-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/fact-counter-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/faq-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/contact-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/breadcrumb-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/team-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/partner-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/testimonial-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/services-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/footer-section.css') }}">
 
-    <link id="jssDefault" rel="stylesheet" href="{{ asset('assets/css/color/theme-color.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+    <link id="jssDefault" rel="stylesheet" href="{{ asset('assets/css/color/theme-color.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png"  sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png"  sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
 
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
@@ -105,7 +104,7 @@
 
 
         <!-- page-direction -->
-        {{--<div class="page_direction">
+        {{-- <div class="page_direction">
             <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
             <div class="demo-ltr direction_switch"><button class="ltr">LTR</button></div>
         </div>
@@ -141,9 +140,9 @@
                     </ul>
                 </div>
             </div>
-        </div>--}}
+        </div> --}}
         <!-- end switcher menu -->
-        @livewire("layouts.header-component")
+        @livewire('layouts.header-component')
         @yield('content')
 
         <div class="bottom-parallax">
@@ -161,7 +160,8 @@
                                         <div class="text-box">
                                             <p>Trujillo, Perú</p>
                                         </div>
-                                        <h2><a href="https://wa.me/+51968372292" target="_blank">+51 968 372 292</a></h2>
+                                        <h2><a href="https://wa.me/+51968372292" target="_blank">+51 968 372 292</a>
+                                        </h2>
                                         <h3><a href="mailto:yourmail@email.com">contacto@gemaswsolutions.com</a></h3>
                                         <div class="footer-social-link">
                                             <ul class="clearfix">
@@ -193,7 +193,9 @@
                                     <div class="footer-widget-links">
                                         <ul>
                                             <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
-                                            <li><a href="/#servicios-seccion">Servicios</a></li>
+                                            <li><a
+                                                    href="@if (!empty($servicios)) {{ route('portafolio', $servicios[0]['id']) }} @else # @endif ">Servicios</a>
+                                            </li>
                                             <li><a href="{{ route('proyectos') }}">Portafolio de proyectos</a></li>
                                             <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>
@@ -221,11 +223,13 @@
                         <div class="bottom-inner">
                             <div class="footer-logo-style1">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ asset('assets/images/footer/footer-logo-gema.png')}}" alt="Awesome Logo" title="">
+                                    <img src="{{ asset('assets/images/footer/footer-logo-gema.png') }}"
+                                        alt="Awesome Logo" title="">
                                 </a>
                             </div>
                             <div class="copyright">
-                                <p>Copyright &copy; 2023 <a href="{{ route('home') }}">Gema: Software Solutions</a> Todos los
+                                <p>Copyright &copy; 2023 <a href="{{ route('home') }}">Gema: Software Solutions</a>
+                                    Todos los
                                     derechos reservados.</p>
                             </div>
 
@@ -273,41 +277,42 @@
 
 
 
-    <script src="{{ asset('assets/js/jquery.js')}}"></script>
-    <script src="{{ asset('assets/js/aos.js')}}"></script>
-    <script src="{{ asset('assets/js/appear.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ asset('assets/js/isotope.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.bootstrap-touchspin.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.countTo.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.easing.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.event.move.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.fancybox.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.paroller.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery-sidebar-content.js')}}"></script>
-    <script src="{{ asset('assets/js/knob.js')}}"></script>
-    <script src="{{ asset('assets/js/map-script.js')}}"></script>
-    <script src="{{ asset('assets/js/owl.js')}}"></script>
-    <script src="{{ asset('assets/js/pagenav.js')}}"></script>
-    <script src="{{ asset('assets/js/scrollbar.js')}}"></script>
-    <script src="{{ asset('assets/js/swiper.min.js')}}"></script>
-    <script src="{{ asset('assets/js/tilt.jquery.js')}}"></script>
-    <script src="{{ asset('assets/js/TweenMax.min.js')}}"></script>
-    <script src="{{ asset('assets/js/validation.js')}}"></script>
-    <script src="{{ asset('assets/js/wow.js')}}"></script>
-    <script src="{{ asset('assets/js/light-bx.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/appear.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.bootstrap-touchspin.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.paroller.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-sidebar-content.js') }}"></script>
+    <script src="{{ asset('assets/js/knob.js') }}"></script>
+    <script src="{{ asset('assets/js/map-script.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.js') }}"></script>
+    <script src="{{ asset('assets/js/pagenav.js') }}"></script>
+    <script src="{{ asset('assets/js/scrollbar.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tilt.jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/validation.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
 
-    <script src="{{ asset('assets/js/jquery-1color-switcher.min.js')}}"></script>
-    <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery-1color-switcher.min.js') }}"></script>
+    <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap">
-        </script>
+    <script src="{{ asset('assets/js/fa-icons.min.js') }}"></script>
+
+    <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap" async
+        defer></script-->
+
 
     <!-- thm custom script -->
-    <script src="{{ asset('assets/js/custom.js')}}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
     @livewireScripts
     @stack('scripts')
 

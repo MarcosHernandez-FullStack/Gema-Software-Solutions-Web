@@ -30,16 +30,16 @@ class HomeComponent extends Component
             $ultimosProyectos  = $data['ultimosProyectos'];
 
             return view('livewire.home.home-component', compact('servicios', 'ultimosProyectos'))
-                ->extends('layouts.principal')
+                ->extends('layouts.principal',compact('servicios'))
                 ->section('content');
         }catch(\Exception $e){
             //retornamos solamente la vista en caso de errores al obtener los datos
             return view('livewire.home.home-component', compact('servicios', 'ultimosProyectos'))
-                ->extends('layouts.principal')
+                ->extends('layouts.principal',compact('servicios'))
                 ->section('content');
         }
     }
-    
+
 
     public function getHome()
     {
