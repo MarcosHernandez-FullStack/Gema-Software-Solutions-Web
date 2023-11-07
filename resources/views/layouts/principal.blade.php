@@ -193,7 +193,7 @@
                                     <div class="footer-widget-links">
                                         <ul>
                                             <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
-                                            <li><a href="/#servicios-seccion">Servicios</a></li>
+                                            <li><a href="@if (!empty($servicios)) {{ route('portafolio',$servicios[0]['id']) }} @else # @endif ">Servicios</a></li>
                                             <li><a href="{{ route('proyectos') }}">Portafolio de proyectos</a></li>
                                             <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                         </ul>
@@ -301,6 +301,8 @@
 
     <script src="{{ asset('assets/js/jquery-1color-switcher.min.js')}}"></script>
     <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
+
+    <script src="{{ asset('assets/js/fa-icons.min.js') }}"></script>
 
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap">

@@ -112,7 +112,7 @@
                                 </li>
                             </ul>
                         </div>-->
-                        
+
                     </div>
                 </div>
                     <!--End Service Details Sidebar -->
@@ -309,14 +309,14 @@
                             </div>
                             @endforeach
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                        <a class="carousel-control-prev"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span ><i class="fa-solid fa-arrow-left fa-beat fa-2xl" style="color: #1266e3;"></i></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExample{{ $proyecto['id'] }}" role="button"
+                        <a class="carousel-control-next"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
                             data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span ><i class="fa-solid fa-arrow-right fa-beat fa-2xl" style="color: #1266e3;"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
