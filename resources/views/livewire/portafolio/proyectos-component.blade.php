@@ -68,6 +68,7 @@
                 <!--End Single Blog Style1-->
                 @endforeach
             </div>
+            @if (!empty($paginacion))
             <div class="row">
                 <div class="col-xl-12">
                     <ul class="styled-pagination text-center clearfix">
@@ -98,6 +99,7 @@
                     </ul>
                 </div>
             </div>
+            @endif
 
         </div>
     </section>

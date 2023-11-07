@@ -94,29 +94,7 @@
             </div>
         </div>
     </section>
-    <!--End About Style2 Area-->
     @livewire('contacto.sociales-component')
-    <!--Start Slogan Style2 Area-->
-    <!--section class="slogan-style2-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="slogan-style2-content">
-                        <div class="title">
-                            <h2>Transforma tus ideas<br> ¡Mira lo que tenemos para ti!</h2>
-                        </div>
-                        <div class="button-box">
-                            <a class="btn-one" href="{{ route('portafolio',$servicios[0]['id']) }}"><span class="txt">Descubre
-                                    Más</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section-->
-    <!--End Slogan Style2 Area-->
-
-
 </div>
 
 
