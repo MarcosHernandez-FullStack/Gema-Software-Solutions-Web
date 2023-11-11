@@ -13,7 +13,7 @@
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
                                 <li><a href="#">Servicios</a></li>
-                                <li class="active">{{$servicio['nombre']}}</li>
+                                <li class="active">{{ $servicio['nombre'] }}</li>
                             </ul>
                         </div>
                         <div class="title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
@@ -39,21 +39,22 @@
                         <div class="view-all-service">
                             <ul class="service-pages">
                                 @foreach ($listaServicios as $item)
-                                <li class="{{ $item['bEstado'] ? 'active' : '' }}">
-                                    {{-- <a href="#" onclick="return false;" wire:click="cambioServicioId($item['id'])">
+                                    <li class="{{ $item['bEstado'] ? 'active' : '' }}">
+                                        {{-- <a href="#" onclick="return false;" wire:click="cambioServicioId($item['id'])">
                                         {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                     </a> --}}
-                                    {{-- <button wire:click="cambioServicioId({{$item['id']}})"> <a href="#"
+                                        {{-- <button wire:click="cambioServicioId({{$item['id']}})"> <a href="#"
                                             onclick="return false;">
                                             {{ $item['descripcion'] }} <span class="icon-right-arrow"></span>
                                         </a></button> --}}
-                                    <a wire:click="cambioServicioId({{$item['id']}})" class="active">
-                                        <button> {{ $item['nombre'] }} </button><span class="icon-right-arrow"></span>
-                                    </a>
-                                    {{--<button class="active" wire:click="cambioServicioId({{$item['id']}})"> {{
-                                        $item['nombre'] }} <span class="icon-right-arrow"></span></button>--}}
+                                        <a wire:click="cambioServicioId({{ $item['id'] }})" class="active">
+                                            <button> {{ $item['nombre'] }} </button><span
+                                                class="icon-right-arrow"></span>
+                                        </a>
+                                        {{-- <button class="active" wire:click="cambioServicioId({{$item['id']}})"> {{
+                                        $item['nombre'] }} <span class="icon-right-arrow"></span></button> --}}
 
-                                </li>
+                                    </li>
                                 @endforeach
 
                             </ul>
@@ -63,21 +64,21 @@
                                 <div class="row">
                                     <!--div class="col-xl-6">
                                     <div class="img-box">
-                                        <img style=" width: 370px; height: 320px" src="{{$servicio['ruta_foto_secundaria']}}"
+                                        <img style=" width: 370px; height: 320px" src="{{ $servicio['ruta_foto_secundaria'] }}"
                                             alt="" />
                                     </div>
                                 </div-->
                                     <div class="col-xl-12">
                                         <div class="content-box">
                                             <h2>Beneficios del Servicio</h2>
-                                            <!--p>Los beneficios que brinda el servicio {{$servicio['nombre']}} son:
+                                            <!--p>Los beneficios que brinda el servicio {{ $servicio['nombre'] }} son:
                                         </p-->
                                             <ul>
                                                 @foreach ($servicio['beneficios'] as $beneficio)
-                                                <li>
-                                                    <span class="icon-check"></span>
-                                                    {{$beneficio['descripcion']}}
-                                                </li>
+                                                    <li>
+                                                        <span class="icon-check"></span>
+                                                        {{ $beneficio['descripcion'] }}
+                                                    </li>
                                                 @endforeach
 
 
@@ -115,32 +116,32 @@
 
                     </div>
                 </div>
-                    <!--End Service Details Sidebar -->
+                <!--End Service Details Sidebar -->
 
-                    <!--Start Service Details Content -->
-                    <div class="col-xl-8 col-lg-7 order-box-1">
-                        <div class=" pl-5 service-details__content">
-                            <div class="img-box-outer">
-                                <div class="img-box1">
-                                    <!--$servicio['ruta_foto_principal']   {}-->
-                                    <img src="{{$servicio['ruta_foto_principal']}}" alt="" />
-                                </div>
-                                <div class="icon">
-                                    <span class="icon-creative"></span>
-                                </div>
+                <!--Start Service Details Content -->
+                <div class="col-xl-8 col-lg-7 order-box-1">
+                    <div class=" pl-5 service-details__content">
+                        <div class="img-box-outer">
+                            <div class="img-box1">
+                                <!--$servicio['ruta_foto_principal']   {}-->
+                                <img src="{{ $servicio['ruta_foto_principal'] }}" alt="" />
                             </div>
-
-                            <div class="text-box1">
-
-                                <h2>{{ $servicio['nombre'] }}</h2>
-
-                                <p>
-                                    {{ $servicio['descripcion_amplia'] }}
-                                </p>
-
+                            <div class="icon">
+                                <span class="icon-creative"></span>
                             </div>
+                        </div>
 
-                            {{-- <div class="text-box2">
+                        <div class="text-box1">
+
+                            <h2>{{ $servicio['nombre'] }}</h2>
+
+                            <p>
+                                {{ $servicio['descripcion_amplia'] }}
+                            </p>
+
+                        </div>
+
+                        {{-- <div class="text-box2">
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="text-box2-single" data-aos="fade-right" data-aos-easing="linear"
@@ -159,16 +160,16 @@
                                 </div>
                             </div> --}}
 
-                            {{-- <div class="text-box3">
+                        {{-- <div class="text-box3">
                                 <p>When an unknown printer took a galley of type and scrambled it to make a type
                                     specimen book. It has survived not only five centuries, but also the leap into
                                     electronic typesetting. Lorem Ipsum has been the ndustry standard dummy text ever
                                     since the 1500s.</p>
                             </div> --}}
 
-                            <!--aca iban beneficios-->
+                        <!--aca iban beneficios-->
 
-                            {{-- <div class="service-details-faq-content">
+                        {{-- <div class="service-details-faq-content">
                                 <ul class="accordion-box">
                                     <li class="accordion block active-block">
                                         <div class="acc-btn active">
@@ -209,12 +210,12 @@
                                 </ul>
                             </div> --}}
 
-                        </div>
                     </div>
-                    <!--End Service Details Content -->
-
                 </div>
+                <!--End Service Details Content -->
+
             </div>
+        </div>
     </section>
     <!--End Service Details area -->
 
@@ -237,40 +238,42 @@
 
 
                 @foreach ($ultimosProyectos as $proyecto)
-                <!--Start Single Blog Style1-->
-                <div class="col-xl-4 col-lg-12">
-                    <div class="single-blog-style1" style="margin-bottom: 0%;padding-bottom: 40px;height: 100%!important;">
-                        <div class="img-holder">
-                            <img src="<?php echo $proyecto['ruta_foto']; ?>" alt="">
-                            <div class="date-box">
-                                <p>{{ $proyecto['fecha_implementacion'] }}</p>
+                    <!--Start Single Blog Style1-->
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="single-blog-style1"
+                            style="margin-bottom: 0%;padding-bottom: 40px;height: 100%!important;">
+                            <div class="img-holder">
+                                <img src="<?php echo $proyecto['ruta_foto']; ?>" alt="">
+                                <div class="date-box">
+                                    <p>{{ $proyecto['fecha_implementacion'] }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-holder d-flex flex-column justify-content-between" style="height: 50%;">
-                            <div class="meta-info">
-                                <ul>
-                                    <li><span class="icon-check"></span>
-                                        <a href="#" data-toggle="modal" data-target="#modal{{ $proyecto['id'] }}">
-                                            {{ $proyecto['empresa_cliente'] }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3>
-                                <a href="#" onclick="return false;" data-toggle="modal"
-                                    data-target="#modal{{ $proyecto['id'] }}">
-                                    <p class="titulo-proyecto-home">{{ $proyecto['nombre'] }}</p>
-                                </a>
-                            </h3>
-                            <div class="btn-box mt-auto">
-                                <!--blog-single.html-->
-                                <a href="#" onclick="return false;" data-toggle="modal"
-                                    data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
+                            <div class="text-holder d-flex flex-column justify-content-between" style="height: 50%;">
+                                <div class="meta-info">
+                                    <ul>
+                                        <li><span class="icon-check"></span>
+                                            <a href="#" data-toggle="modal"
+                                                data-target="#modal{{ $proyecto['id'] }}">
+                                                {{ $proyecto['empresa_cliente'] }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    <a href="#" onclick="return false;" data-toggle="modal"
+                                        data-target="#modal{{ $proyecto['id'] }}">
+                                        <p class="titulo-proyecto-home">{{ $proyecto['nombre'] }}</p>
+                                    </a>
+                                </h3>
+                                <div class="btn-box mt-auto">
+                                    <!--blog-single.html-->
+                                    <a href="#" onclick="return false;" data-toggle="modal"
+                                        data-target="#modal{{ $proyecto['id'] }}">{{ $proyecto['servicio'] }}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--End Single Blog Style1-->
+                    <!--End Single Blog Style1-->
                 @endforeach
 
 
@@ -281,51 +284,54 @@
     <!--End Blog Style1 Area-->
 
     @foreach ($ultimosProyectos as $proyecto)
-    <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
-        aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
-                        {{ $proyecto['nombre'] }}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    {{-- @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+        <div class="modal fade" id="modal{{ $proyecto['id'] }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalLabel{{ $proyecto['id'] }}" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 style="color: black" class="modal-title" id="modalLabel{{ $proyecto['id'] }}">
+                            {{ $proyecto['nombre'] }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{-- @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
                     {{$detalle['ruta_foto']}}
                     @endforeach --}}
-                    <div id="carouselExample{{ $proyecto['id'] }}" class="carousel carousel-dark slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
-                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }} ">
-                                <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
-                                    alt="Detalle {{ $index + 1 }}">
-                                <div class="carousel-caption d-none d-md-block "
-                                    style="width: 100%;left:0%;right:0%;color: var(--thm-primary);font-size: 2rem; background-color: rgba(32, 186, 209, 0.7);">
-                                    <p class="">{{ $detalle['nombre'] }}</p>
-                                </div>
+                        <div id="carouselExample{{ $proyecto['id'] }}" class="carousel carousel-dark slide"
+                            data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($proyecto['sub_servicio_detalle'] as $index => $detalle)
+                                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }} ">
+                                        <img src="{{ $detalle['ruta_foto'] }}" class="d-block w-100"
+                                            alt="Detalle {{ $index + 1 }}">
+                                        <div class="carousel-caption d-none d-md-block "
+                                            style="width: 100%;left:0%;right:0%;color: var(--thm-primary);font-size: 2rem; background-color: rgba(32, 186, 209, 0.7);">
+                                            <p class="">{{ $detalle['nombre'] }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                            @endforeach
+                            <a class="carousel-control-prev" style="opacity: 1!important"
+                                href="#carouselExample{{ $proyecto['id'] }}" role="button" data-slide="prev">
+                                <span><i class="fa-solid fa-arrow-left fa-beat fa-2xl"
+                                        style="color: #20BAD1;"></i></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" style="opacity: 1!important"
+                                href="#carouselExample{{ $proyecto['id'] }}" role="button" data-slide="next">
+                                <span><i class="fa-solid fa-arrow-right fa-beat fa-2xl"
+                                        style="color: #20BAD1;"></i></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <a class="carousel-control-prev"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
-                            data-slide="prev">
-                            <span ><i class="fa-solid fa-arrow-left fa-beat fa-2xl" style="color: #1266e3;"></i></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next"  style="opacity: 1!important" href="#carouselExample{{ $proyecto['id'] }}" role="button"
-                            data-slide="next">
-                            <span ><i class="fa-solid fa-arrow-right fa-beat fa-2xl" style="color: #1266e3;"></i></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
-                </div>
-                {{-- <div class="modal-footer">
+                    {{-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div> --}}
+                </div>
             </div>
         </div>
-    </div>
     @endforeach
 </div>
