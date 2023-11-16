@@ -119,7 +119,7 @@
                                     <ul>
                                         <li>
                                             <span class="icon-check"></span>
-                                            Experiencia y Expertise.
+                                            Experiencia y Experticia.
                                         </li>
                                         <li>
                                             <span class="icon-check"></span>

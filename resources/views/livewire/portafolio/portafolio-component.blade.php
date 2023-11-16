@@ -11,7 +11,7 @@
 
                         <div class="breadcrumb-menu">
                             <ul>
-                                <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('home') }}">Inicio</a></li>
                                 <li><a href="#">Servicios</a></li>
                                 <li class="active">{{ $servicio['nombre'] }}</li>
                             </ul>
