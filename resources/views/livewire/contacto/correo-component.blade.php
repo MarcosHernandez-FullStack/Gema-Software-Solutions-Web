@@ -1,7 +1,7 @@
 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
     <div class="single-footer-widget">
         <div class="title">
-            <h3>No ponemos en contacto</h3>
+            <h3>Nos ponemos en contacto</h3>
         </div>
         <form class="newsletter-form" wire:submit.prevent ="cargarData">
             <input wire:model.defer="email" type="email" name="email" placeholder="Correo electrónico" required="">
@@ -11,7 +11,8 @@
             <div class="checked-box1">
                 {{-- <input type="checkbox" name="newsletter-check" id="newsletter" checked=""> --}}
                 <label for="newsletter" style="font-size: 13px; padding-left: inherit;">
-                    {{-- <span></span> --}}Ingresa tu correo y nos comunicaremos contigo lo más breve posible. También puedes dejar un mensaje más detallado en <a href="">Contactanos</a>.
+                    {{-- <span></span> --}}Nos comunicaremos contigo lo más pronto posible. También puedes dejar un
+                    mensaje más detallado en <a href="">Contáctanos</a>.
                 </label>
             </div>
         </form>

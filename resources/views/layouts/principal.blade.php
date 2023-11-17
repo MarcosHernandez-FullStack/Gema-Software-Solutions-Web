@@ -166,13 +166,10 @@
                                         <div class="footer-social-link">
                                             <ul class="clearfix">
                                                 <li>
-                                                    <a href="#"><i class="icon-twitter"></i></a>
-                                                </li>
-                                                <li>
                                                     <a href="#"><i class="icon-facebook-circular-logo"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i class="icon-pinterest"></i></a>
+                                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="#"><i class="icon-instagram"></i></a>

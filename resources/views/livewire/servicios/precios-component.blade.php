@@ -12,12 +12,12 @@
             <div class="row mb-5">
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
                     <div class="pricing d-flex flex-column justify-content-between" style="height: 100%;">
-                        <h3 class="text-center text-black">BASICO</h3>
+                        <h3 class="text-center text-black">BÁSICO</h3>
                         <div class="price text-center mb-4 ">
                             <span><span>$99</span> USD</span>
                         </div>
                         <div class="mt-3">
-                            <p>Pagina Web informativa que se establece bajo un patrón dado</p>
+                            <p>Página Web informativa que se establece bajo un patrón dado</p>
                         </div>
                         <ul class="list-unstyled ml-3">
                             <li><span class="icon-check"></span>
@@ -32,7 +32,7 @@
                                 Dos meses de soporte gratuito</li>
                         </ul>
                         <p class="text-center mt-auto">
-                            <a href="{{route('contacto')}}" class="btn-one">Obtenlo Ahora</a>
+                            <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                             <span><span>$199</span> USD</span>
                         </div>
                         <div class="mt-3">
-                            <p>Pagina Web para venta de productos con pagos online</p>
+                            <p>Página Web para venta de productos con pagos online</p>
                         </div>
                         <ul class="list-unstyled ml-3">
                             <li><span class="icon-check"></span>
@@ -59,7 +59,7 @@
                                 Tres meses de soporte gratuito</li>
                         </ul>
                         <p class="text-center mt-auto">
-                            <a href="{{route('contacto')}}" class="btn-one">Obtenlo Ahora</a>
+                            <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         </div>
                         <ul class="list-unstyled ml-3">
                             <li><span class="icon-check"></span>
-                                Modulo de proceso principal y mantenedores</li>
+                                Módulo de proceso principal y mantenedores</li>
                             <li><span class="icon-check"></span>
                                 Diseño de BD único</li>
                             <li><span class="icon-check"></span>
@@ -84,7 +84,7 @@
                                 Cuatro meses de soporte gratuito</li>
                         </ul>
                         <p class="text-center mt-auto">
-                            <a href="{{route('contacto')}}" class="btn-one">Obtenlo Ahora</a>
+                            <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
                     </div>
                 </div>
