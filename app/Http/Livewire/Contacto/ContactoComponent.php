@@ -42,8 +42,6 @@ class ContactoComponent extends Component
         $this->validateOnly($propertyName);
     }
 
-    
-
     public function resetError(){
         $this->resetErrorBag();
         $this->resetValidation();
@@ -70,5 +68,31 @@ class ContactoComponent extends Component
         $this->telefono='';
         $this->asunto='';
         $this->mensaje='';    
+    }
+
+    public function save()
+    {
+        $this->validate();
+        $contact['nombre'] = $this->nombre;
+        $contact['email'] = $this->email;
+        $contact['telefono'] = $this->telefono;
+        $contact['asunto'] = $this->asunto;
+        $contact['mensaje'] = $this->mensaje;
+        try {
+            $response = Http::post((env('API_URL').'postSaveContacto/'),['contacto'=>$contact]);
+
+            if ($response->successful()) {
+                $data = $response->json();
+                return $data;
+            }else{
+                //si la respuesta no es correcta, entonces devuelve vacio
+                return [];
+            }
+
+        } catch (\Exception $e) {
+            //captura el error y devuelve vacio
+            return [];
+        }
+
     }
 }

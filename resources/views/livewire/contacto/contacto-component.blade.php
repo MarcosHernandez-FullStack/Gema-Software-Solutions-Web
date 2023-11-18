@@ -73,7 +73,7 @@
                             <div class="col-xl-12 text-center">
                                 <div class="button-box">
 
-                                    <button class="btn-one" type="button" wire:click ="cargarData">
+                                    <button class="btn-one" type="button" wire:click ="save">
                                         <span class="txt">
                                             Enviar mensaje
                                         </span>
