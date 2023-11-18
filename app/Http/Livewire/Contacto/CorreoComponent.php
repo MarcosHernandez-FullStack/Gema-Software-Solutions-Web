@@ -36,14 +36,17 @@ class CorreoComponent extends Component
             $response = Http::post((env('API_URL').'postSaveContacto/'),['contacto'=>$contact]);
 
             if ($response->successful()) {
+                $this->dispatchBrowserEvent('contacto', ['mensaje' => 'Estar atento a su correo, en breve lo contactaremos!']);
                 $data = $response->json();
                 return $data;
             }else{
+                $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
                 //si la respuesta no es correcta, entonces devuelve vacio
                 return [];
             }
 
         } catch (\Exception $e) {
+            $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
             //captura el error y devuelve vacio
             return [];
         }

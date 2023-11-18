@@ -61,6 +61,10 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
+
+     <!-- sweetalert -->
+     <link rel="stylesheet" href="{{ asset('assets/css/sweetalert2.min.css') }}">
+     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     @livewireStyles
 </head>
 
@@ -166,14 +170,14 @@
                                         <div class="footer-social-link">
                                             <ul class="clearfix">
                                                 <li>
-                                                    <a href="#"><i class="icon-facebook-circular-logo"></i></a>
+                                                    <a href="https://www.facebook.com/profile.php?id=61553384944223"  target="_blank"><i class="icon-facebook-circular-logo"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                                    <a href="https://www.linkedin.com/company/gema-software-solutions" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                                 </li>
-                                                <li>
-                                                    <a href="#"><i class="icon-instagram"></i></a>
-                                                </li>
+                                               {{--  <li>
+                                                    <a href="https://www.instagram.com/g_gema2023/" target="_blank"><i class="icon-instagram"></i></a>
+                                                </li> --}}
                                             </ul>
                                         </div>
                                     </div>
@@ -303,6 +307,7 @@
     <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/fa-icons.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
 
     <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap" async
         defer></script-->
@@ -310,6 +315,51 @@
 
     <!-- thm custom script -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script>
+        //MENSAJE SWEETALERT 2
+        window.addEventListener('success', function(event) {
+            Swal.fire(
+                'Felicidades!',
+                event.detail.mensaje,
+                'success'
+            )
+        });
+        window.addEventListener('info', function(event) {
+            Swal.fire(
+                'Aviso!',
+                event.detail.mensaje,
+                'info'
+            )
+        });
+        window.addEventListener('error', function(event) {
+            Swal.fire(
+                'Error!',
+                event.detail.mensaje,
+                'error'
+            )
+        });
+        window.addEventListener('warning', function(event) {
+            Swal.fire(
+                'Cuidado!',
+                event.detail.mensaje,
+                'warning'
+            )
+        });
+        window.addEventListener('question', function(event) {
+            Swal.fire(
+                'Aviso!',
+                event.detail.mensaje,
+                'question'
+            )
+        });
+         window.addEventListener('contacto', function(event) {
+            Swal.fire(
+                'Gracias por elegirnos!',
+                event.detail.mensaje,
+                'success'
+            )
+        });
+    </script>
     @livewireScripts
     @stack('scripts')
 
