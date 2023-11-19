@@ -175,9 +175,9 @@
                                                 <li>
                                                     <a href="https://www.linkedin.com/company/gema-software-solutions" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                                 </li>
-                                               {{--  <li>
-                                                    <a href="https://www.instagram.com/g_gema2023/" target="_blank"><i class="icon-instagram"></i></a>
-                                                </li> --}}
+                                                <li>
+                                                    <a href="https://www.instagram.com/gemasws/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="icon-instagram"></i></a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>

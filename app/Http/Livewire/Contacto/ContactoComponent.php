@@ -20,6 +20,7 @@ class ContactoComponent extends Component
     public $asunto;
     public $mensaje;
 
+
     protected $rules=[
         'nombre' => 'required|max:255',
         'email' => 'required|email',
@@ -28,7 +29,7 @@ class ContactoComponent extends Component
         'mensaje' => 'required|max:500',
     ];
 
-   protected $messages = [
+    protected $messages = [
         'nombre.required' => 'La nombre es obligatorio',
         'nombre.max' => 'El nombre debe tener 255 caracteres como máximo',
         'email.required' => 'El correo es obligatorio.',
@@ -41,21 +42,24 @@ class ContactoComponent extends Component
         'mensaje.max' => 'El mensaje debe tener 500 caracteres como máximo.',
     ];
 
-    public function updated($propertyName){
+    public function updated($propertyName)
+    {
         $this->validateOnly($propertyName);
     }
 
-    public function resetError(){
+    public function resetError()
+    {
         $this->resetErrorBag();
         $this->resetValidation();
     }
-    
+
     public function render()
     {
         return view('livewire.contacto.contacto-component');
     }
 
-    public function cargarData(){
+    public function cargarData()
+    {
         $this->validate();
 
         $contact['nombre'] = $this->nombre;
@@ -66,11 +70,11 @@ class ContactoComponent extends Component
 
         Mail::to('guevaredo03@gmail.com')->send(new MiCorreo($contact));
 
-        $this->nombre='';
-        $this->email='';
-        $this->telefono='';
-        $this->asunto='';
-        $this->mensaje='';    
+        $this->nombre = '';
+        $this->email = '';
+        $this->telefono = '';
+        $this->asunto = '';
+        $this->mensaje = '';
     }
 
     public function save()
@@ -82,23 +86,28 @@ class ContactoComponent extends Component
         $contact['asunto'] = $this->asunto;
         $contact['mensaje'] = $this->mensaje;
         try {
-            $response = Http::post((env('API_URL').'postSaveContacto'),['contacto'=>$contact]);
 
+            $response = Http::post((env('API_URL').'postSaveContacto'),['contacto'=>$contact]);
             if ($response->successful()) {
                 $this->dispatchBrowserEvent('contacto', ['mensaje' => 'Estar atento a su correo y teléfono, en breve lo contactaremos!']);
                 $data = $response->json();
+                // Reinicializar las variables después de enviar el formulario
+                $this->nombre = '';
+                $this->email = '';
+                $this->telefono = '';
+                $this->asunto = '';
+                $this->mensaje = '';
+
                 return $data;
-            }else{
+            } else {
                 $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
                 //si la respuesta no es correcta, entonces devuelve vacio
                 return [];
             }
-
         } catch (\Exception $e) {
             $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
             //captura el error y devuelve vacio
             return [];
         }
-
     }
 }
