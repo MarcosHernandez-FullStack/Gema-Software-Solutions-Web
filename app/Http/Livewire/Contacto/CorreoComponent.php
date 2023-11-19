@@ -18,7 +18,8 @@ class CorreoComponent extends Component
         return view('livewire.contacto.correo-component');
     }
 
-    public function cargarData(){
+    public function cargarData()
+    {
 
         $contact['nombre'] = 'Cliente';
         $contact['email'] = $this->email;
@@ -27,24 +28,24 @@ class CorreoComponent extends Component
         $contact['mensaje'] = 'Nuevo cliente';
         Mail::to('guevaredo03@gmail.com')->send(new MiCorreo($contact));
         $this->email = '';
-        
     }
 
-    public function save(){
+    public function save()
+    {
         $contact['email'] = $this->email;
         try {
-            $response = Http::post((env('API_URL').'postSaveContacto/'),['contacto'=>$contact]);
+            $response = Http::post((env('API_URL') . 'postSaveContacto/'), ['contacto' => $contact]);
 
             if ($response->successful()) {
                 $this->dispatchBrowserEvent('contacto', ['mensaje' => 'Estar atento a su correo, en breve lo contactaremos!']);
                 $data = $response->json();
+                $this->email = '';
                 return $data;
-            }else{
+            } else {
                 $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
                 //si la respuesta no es correcta, entonces devuelve vacio
                 return [];
             }
-
         } catch (\Exception $e) {
             $this->dispatchBrowserEvent('error', ['mensaje' => 'No se logró enviar sus datos!']);
             //captura el error y devuelve vacio
