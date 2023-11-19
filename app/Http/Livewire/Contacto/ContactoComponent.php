@@ -20,20 +20,24 @@ class ContactoComponent extends Component
     public $asunto;
     public $mensaje;
 
-    protected $rules = [
-        'nombre' => 'required',
+
+    protected $rules=[
+        'nombre' => 'required|max:255',
         'email' => 'required|email',
-        'telefono' => 'required',
-        'asunto' => 'required',
+        'telefono' => 'required|max:20',
+        'asunto' => 'required|max:255',
         'mensaje' => 'required|max:500',
     ];
 
     protected $messages = [
         'nombre.required' => 'La nombre es obligatorio',
+        'nombre.max' => 'El nombre debe tener 255 caracteres como máximo',
         'email.required' => 'El correo es obligatorio.',
         'email.email' => 'Los datos deben tener un formato de correo.',
         'telefono.required' => 'El teléfono es obligatorio.',
+        'telefono.max' => 'El teléfono debe tener 20 caracteres como máximo',
         'asunto.required' => 'El asunto es obligatorio.',
+        'asunto.max' => 'El asunto debe tener 255 caracteres como máximo',
         'mensaje.required' => 'El mensaje es obligatorio.',
         'mensaje.max' => 'El mensaje debe tener 500 caracteres como máximo.',
     ];
@@ -82,8 +86,8 @@ class ContactoComponent extends Component
         $contact['asunto'] = $this->asunto;
         $contact['mensaje'] = $this->mensaje;
         try {
-            $response = Http::post((env('API_URL') . 'postSaveContacto/'), ['contacto' => $contact]);
 
+            $response = Http::post((env('API_URL').'postSaveContacto'),['contacto'=>$contact]);
             if ($response->successful()) {
                 $this->dispatchBrowserEvent('contacto', ['mensaje' => 'Estar atento a su correo y teléfono, en breve lo contactaremos!']);
                 $data = $response->json();
