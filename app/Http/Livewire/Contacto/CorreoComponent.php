@@ -33,7 +33,7 @@ class CorreoComponent extends Component
     public function save(){
         $contact['email'] = $this->email;
         try {
-            $response = Http::post((env('API_URL').'postSaveContacto/'),['contacto'=>$contact]);
+            $response = Http::post((env('API_URL').'postSaveContacto'),['contacto'=>$contact]);
 
             if ($response->successful()) {
                 $this->dispatchBrowserEvent('contacto', ['mensaje' => 'Estar atento a su correo, en breve lo contactaremos!']);
