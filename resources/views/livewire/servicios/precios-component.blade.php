@@ -14,23 +14,28 @@
                     <div class="pricing d-flex flex-column justify-content-between" style="height: 100%;">
                         <h3 class="text-center text-black">BÁSICO</h3>
                         <div class="price text-center mb-4 ">
-                            <span><span>$99</span> USD</span>
+                            <span><span>$199</span> USD</span>
                         </div>
                         <div class="mt-3">
-                            <p>Página Web informativa que se establece bajo un patrón dado</p>
+                            <p>Sitio Web Informativo dinámico y 100% administrable</p>
                         </div>
-                        <ul class="list-unstyled ml-3">
+                        <ul class="list-unstyled ml-3 mb-2">
+                            <li><span class="icon-check"></span>
+                                Vista Principal</li>
                             <li><span class="icon-check"></span>
                                 Sobre Nosotros</li>
                             <li><span class="icon-check"></span>
-                                Nuestros Servicios</li>
+                                Catálogo de Servicios</li>
                             <li><span class="icon-check"></span>
-                                Catálogo</li>
-                            <li><span class="icon-check"></span>
-                                Contacto</li>
+                                Formulario de Contacto</li>
                             <li><span class="icon-check"></span>
                                 Dos meses de soporte gratuito</li>
+                            <span class="mb-2" style="font-size: 80%"><i class="fa-solid fa-circle-info"></i> Precio
+                                base
+                                sujeto a
+                                cotización.</span>
                         </ul>
+
                         <p class="text-center mt-auto">
                             <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
@@ -41,23 +46,28 @@
                     <div class="pricing d-flex flex-column justify-content-between" style="height: 100%;">
                         <h3 class="text-center text-black">ECOMMERCE</h3>
                         <div class="price text-center mb-4 ">
-                            <span><span>$199</span> USD</span>
+                            <span><span>$299</span> USD</span>
                         </div>
                         <div class="mt-3">
                             <p>Página Web para venta de productos con pagos online</p>
                         </div>
-                        <ul class="list-unstyled ml-3">
+                        <ul class="list-unstyled ml-3 mb-2">
+                            <li><span class="icon-check"></span>
+                                Vista Principal</li>
                             <li><span class="icon-check"></span>
                                 Catálogo de productos</li>
                             <li><span class="icon-check"></span>
                                 Carrito de compras</li>
                             <li><span class="icon-check"></span>
-                                Pasarela de Pago</li>
+                                Pagos Online</li>
                             <li><span class="icon-check"></span>
-                                Panel de administración</li>
-                            <li><span class="icon-check"></span>
-                                Tres meses de soporte gratuito</li>
+                                Dos meses de soporte gratuito</li>
+                            <span class="mb-2" style="font-size: 80%"><i class="fa-solid fa-circle-info"></i> Precio
+                                base
+                                sujeto a
+                                cotización.</span>
                         </ul>
+
                         <p class="text-center mt-auto">
                             <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
@@ -68,21 +78,26 @@
                     <div class="pricing d-flex flex-column justify-content-between" style="height: 100%;">
                         <h3 class="text-center text-black">PERSONALIZADO</h3>
                         <div class="price text-center mb-4 ">
-                            <span><span>$299</span> USD</span>
+                            <span><span>$399</span> USD</span>
                         </div>
                         <div class="mt-3">
-                            <p>Sistemas de información enfocado a procesos</p>
+                            <p>Sistemas de Información enfocado a procesos</p>
                         </div>
-                        <ul class="list-unstyled ml-3">
+                        <ul class="list-unstyled ml-3 mb-2">
                             <li><span class="icon-check"></span>
                                 Módulo de proceso principal y mantenedores</li>
                             <li><span class="icon-check"></span>
-                                Diseño de BD único</li>
+                                Diseño de Base de Datos único</li>
                             <li><span class="icon-check"></span>
                                 Módulo de reportes</li>
                             <li><span class="icon-check"></span>
-                                Cuatro meses de soporte gratuito</li>
+                                Dos meses de soporte gratuito</li>
+                            <span class="mb-2" style="font-size: 80%"><i class="fa-solid fa-circle-info"></i> Precio
+                                base
+                                sujeto a
+                                cotización.</span>
                         </ul>
+
                         <p class="text-center mt-auto">
                             <a href="{{ route('contacto') }}" class="btn-one">Obtenlo Ahora</a>
                         </p>
